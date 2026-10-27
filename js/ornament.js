@@ -450,32 +450,148 @@ function garland(mat, from, to, sag, thick) {
   return new THREE.Mesh(new THREE.TubeGeometry(curve, 40, thick, 12, false), mat);
 }
 
-function statue(bronze, s) {
-  // A draped standing figure, turned on a lathe, with head, arms and key.
+/** A limb from point a to point b: a capsule of radius r. */
+function limb(mat, a, b, r) {
+  const dir = b.clone().sub(a);
+  const len = dir.length();
+  const mesh = new THREE.Mesh(new THREE.CapsuleGeometry(r, Math.max(0.001, len - 2 * r), 6, 14), mat);
+  mesh.position.copy(a).add(b).multiplyScalar(0.5);
+  mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir.normalize());
+  return mesh;
+}
+
+/** Push every vertex out or in along its own radius, for folds and curls. */
+function displace(geo, fn) {
+  const pos = geo.attributes.position;
+  const v = new THREE.Vector3();
+  for (let i = 0; i < pos.count; i += 1) {
+    v.fromBufferAttribute(pos, i);
+    const a = Math.atan2(v.z, v.x);
+    const k = fn(a, v.y, v);
+    pos.setXYZ(i, v.x * k, v.y, v.z * k);
+  }
+  geo.computeVertexNormals();
+  return geo;
+}
+
+/** One of St Peter's keys: a ring bow, a long shaft and a notched bit. */
+function key(mat, s) {
   const g = new THREE.Group();
+  const bow = new THREE.Mesh(new THREE.TorusGeometry(0.055 * s, 0.014 * s, 8, 24), mat);
+  bow.position.y = -0.04 * s;
+  const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.014 * s, 0.014 * s, 0.42 * s, 8), mat);
+  shaft.position.y = 0.2 * s;
+  const bit = new THREE.Mesh(new THREE.BoxGeometry(0.07 * s, 0.1 * s, 0.018 * s), mat);
+  bit.position.set(0.04 * s, 0.36 * s, 0);
+  const notch = new THREE.Mesh(new THREE.BoxGeometry(0.03 * s, 0.025 * s, 0.022 * s), mat);
+  notch.position.set(0.07 * s, 0.33 * s, 0);
+  g.add(bow, shaft, bit, notch);
+  return g;
+}
+
+function statue(bronze, s) {
+  // St Peter in bronze, as he has stood on the column since 1588: a long
+  // tunic falling in folds, a cloak over the back and one shoulder, the keys
+  // of heaven raised in his right hand and a scroll in his left. Built facing
+  // +z; the caller turns him to face the inscription.
+  const g = new THREE.Group();
+  const V = (x, y, z) => new THREE.Vector3(x * s, y * s, z * s);
+
+  // the tunic, turned on a lathe, then pleated
   const profile = [
-    [0, 0], [0.3, 0], [0.31, 0.06], [0.27, 0.3], [0.23, 0.8], [0.2, 1.25],
-    [0.23, 1.55], [0.26, 1.75], [0.22, 1.9], [0.1, 2.0], [0.08, 2.06], [0, 2.08],
+    [0, 0], [0.27, 0], [0.29, 0.04], [0.27, 0.14], [0.24, 0.45], [0.215, 0.8], [0.2, 1.05],
+    [0.19, 1.22], [0.205, 1.4], [0.225, 1.58], [0.235, 1.7], [0.21, 1.8], [0.13, 1.87], [0.075, 1.9], [0, 1.9],
   ].map(([r, y]) => new THREE.Vector2(r * s, y * s));
-  const robe = new THREE.Mesh(new THREE.LatheGeometry(profile, 40), bronze);
-  robe.scale.z = 0.75;
-  const head = new THREE.Mesh(new THREE.SphereGeometry(0.13 * s, 20, 16), bronze);
-  head.position.y = 2.2 * s;
-  const halo = new THREE.Mesh(new THREE.TorusGeometry(0.2 * s, 0.015 * s, 8, 32), bronze);
-  halo.position.set(0, 2.26 * s, -0.1 * s);
-  const armR = new THREE.Mesh(new THREE.CylinderGeometry(0.05 * s, 0.06 * s, 0.6 * s, 12), bronze);
-  armR.position.set(0.26 * s, 1.92 * s, 0.08 * s);
-  armR.rotation.z = -0.75;
-  const key = new THREE.Mesh(new THREE.CylinderGeometry(0.022 * s, 0.022 * s, 0.55 * s, 8), bronze);
-  key.position.set(0.5 * s, 2.25 * s, 0.1 * s);
-  const bit = new THREE.Mesh(new THREE.BoxGeometry(0.1 * s, 0.07 * s, 0.025 * s), bronze);
-  bit.position.set(0.54 * s, 2.5 * s, 0.1 * s);
-  const armL = new THREE.Mesh(new THREE.CylinderGeometry(0.05 * s, 0.06 * s, 0.55 * s, 12), bronze);
-  armL.position.set(-0.2 * s, 1.55 * s, 0.14 * s);
-  armL.rotation.set(0.6, 0, 0.35);
-  const book = new THREE.Mesh(new THREE.BoxGeometry(0.2 * s, 0.26 * s, 0.06 * s), bronze);
-  book.position.set(-0.26 * s, 1.32 * s, 0.3 * s);
-  g.add(robe, head, halo, armR, key, bit, armL, book);
+  const tunicGeo = displace(new THREE.LatheGeometry(profile, 96), (a, y) => {
+    const t = y / s;
+    const below = Math.max(0, 1 - t / 1.25);            // folds deepen toward the hem
+    return 1 + 0.06 * below * Math.sin(a * 13 + t * 1.6) + 0.025 * Math.sin(a * 27 - t * 3);
+  });
+  const tunic = new THREE.Mesh(tunicGeo, bronze);
+  tunic.scale.z = 0.74;
+  g.add(tunic);
+
+  // the cloak: an open shell over the back and the left shoulder, hanging in
+  // heavier folds, with a sash slung across the chest
+  const cloakGeo = displace(
+    new THREE.CylinderGeometry(0.245 * s, 0.31 * s, 1.35 * s, 96, 24, true, Math.PI * 0.35, Math.PI * 1.3),
+    (a, y) => 1 + 0.07 * Math.sin(a * 9 + y / s * 2.5),
+  );
+  const cloak = new THREE.Mesh(cloakGeo, bronze);
+  cloak.position.y = 1.12 * s;
+  cloak.scale.z = 0.8;
+  cloak.material = bronze;
+  g.add(cloak);
+  const sash = new THREE.Mesh(new THREE.TorusGeometry(0.235 * s, 0.035 * s, 10, 48, Math.PI), bronze);
+  sash.position.set(0, 1.5 * s, 0.02 * s);
+  sash.rotation.set(Math.PI / 2 - 0.25, 0.55, 0);
+  sash.scale.set(1, 0.74, 1);
+  g.add(sash);
+
+  // feet under the hem
+  for (const x of [-0.09, 0.09]) {
+    const foot = new THREE.Mesh(new THREE.CapsuleGeometry(0.04 * s, 0.1 * s, 4, 10), bronze);
+    foot.rotation.x = Math.PI / 2;
+    foot.position.set(x * s, 0.04 * s, 0.2 * s);
+    g.add(foot);
+  }
+
+  // neck and head
+  g.add(limb(bronze, V(0, 1.86, 0), V(0, 2.0, 0.01), 0.055 * s));
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.105 * s, 28, 22), bronze);
+  head.scale.set(0.92, 1.12, 1);
+  head.position.copy(V(0, 2.09, 0.02));
+  g.add(head);
+  // curly hair: a cap of bumps over the back and top of the head
+  const hairGeo = displace(new THREE.SphereGeometry(0.112 * s, 32, 20, 0, Math.PI * 2, 0, Math.PI * 0.55), (a, y, v) => 1 + 0.06 * Math.sin(a * 14) * Math.sin(y / s * 140));
+  const hair = new THREE.Mesh(hairGeo, bronze);
+  hair.scale.set(0.95, 1.1, 1);
+  hair.position.copy(V(0, 2.1, 0.005));
+  hair.rotation.x = -0.25;
+  g.add(hair);
+  // beard, nose, ears
+  const beardGeo = displace(new THREE.SphereGeometry(0.075 * s, 20, 14), (a, y) => 1 + 0.08 * Math.sin(a * 10 + y / s * 90));
+  const beard = new THREE.Mesh(beardGeo, bronze);
+  beard.scale.set(1, 1.15, 0.7);
+  beard.position.copy(V(0, 2.0, 0.07));
+  g.add(beard);
+  const nose = new THREE.Mesh(new THREE.ConeGeometry(0.016 * s, 0.05 * s, 8), bronze);
+  nose.rotation.x = Math.PI / 2;
+  nose.position.copy(V(0, 2.1, 0.12));
+  g.add(nose);
+  for (const x of [-0.1, 0.1]) {
+    const ear = new THREE.Mesh(new THREE.SphereGeometry(0.022 * s, 10, 8), bronze);
+    ear.scale.set(0.5, 1, 0.8);
+    ear.position.copy(V(x, 2.09, 0.0));
+    g.add(ear);
+  }
+
+  // right arm raised, holding up the two crossed keys
+  const shoulderR = V(0.2, 1.74, 0.02), elbowR = V(0.34, 1.52, 0.1), handR = V(0.36, 1.86, 0.16);
+  g.add(limb(bronze, shoulderR, elbowR, 0.055 * s), limb(bronze, elbowR, handR, 0.046 * s));
+  const fist = new THREE.Mesh(new THREE.SphereGeometry(0.045 * s, 14, 10), bronze);
+  fist.position.copy(handR);
+  g.add(fist);
+  const keys = new THREE.Group();
+  const k1 = key(bronze, s); k1.rotation.z = 0.35;
+  const k2 = key(bronze, s); k2.rotation.z = -0.35;
+  k2.position.z = 0.02 * s;
+  keys.add(k1, k2);
+  keys.position.copy(handR).add(V(0, 0.02, 0.02));
+  g.add(keys);
+
+  // left arm bent, holding a scroll against the body
+  const shoulderL = V(-0.2, 1.74, 0.02), elbowL = V(-0.27, 1.4, 0.05), handL = V(-0.12, 1.3, 0.2);
+  g.add(limb(bronze, shoulderL, elbowL, 0.055 * s), limb(bronze, elbowL, handL, 0.046 * s));
+  const scroll = new THREE.Mesh(new THREE.CylinderGeometry(0.035 * s, 0.035 * s, 0.26 * s, 14), bronze);
+  scroll.position.copy(handL).add(V(0, 0.02, 0.03));
+  scroll.rotation.set(0.2, 0, 1.2);
+  g.add(scroll);
+
+  // a small square plinth under his feet
+  const plinth = new THREE.Mesh(new THREE.BoxGeometry(0.62 * s, 0.06 * s, 0.62 * s), bronze);
+  plinth.position.y = -0.03 * s;
+  g.add(plinth);
   return g;
 }
 
@@ -601,8 +717,8 @@ export async function buildOrnament({ radius, band, shaftH }) {
   drumCap.position.y = shaftH + band * 4.15;
   group.add(drum, drumCap);
 
-  const bronze = new THREE.MeshStandardMaterial({ color: 0x6d5c3d, roughness: 0.42, metalness: 0.35 });
-  const figure = statue(bronze, band * 1.55);
+  const bronze = new THREE.MeshStandardMaterial({ color: 0x8c7650, roughness: 0.42, metalness: 0.3, side: THREE.DoubleSide });
+  const figure = statue(bronze, band * 1.7);
   figure.position.y = shaftH + band * 4.4;
   figure.rotation.y = Math.PI / 2;            // faces the same way as the inscription
   group.add(figure);

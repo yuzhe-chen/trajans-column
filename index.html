@@ -111,9 +111,9 @@
           <div class="prose" data-list="overview.body"></div>
         </div>
         <aside class="factpanel" aria-labelledby="facts-title">
-          <h2 id="facts-title">At a glance</h2>
+          <h2 id="facts-title">The column in numbers</h2>
           <dl class="rows" data-facts="overview.facts"></dl>
-          <a class="button button--block" href="#ascent">Climb the column <span class="button__arrow" aria-hidden="true"></span></a>
+          <a class="button button--block" href="#ascent">Start at the bottom <span class="button__arrow" aria-hidden="true"></span></a>
         </aside>
       </div>
     </section>
@@ -138,6 +138,10 @@
     <!-- ───────────── inscription station ───────────── -->
     <section class="station" id="inscription" aria-labelledby="inscription-title">
       <div class="station__stage">
+        <div class="station__head">
+          <h2 id="inscription-title">Read the stone</h2>
+          <p class="eyebrow">The dedication on the base · <span data-content="inscription.ref"></span></p>
+        </div>
         <div class="station__art">
           <img class="station__img" src="assets/misc/inscription.jpg" alt="The dedicatory inscription on the pedestal of Trajan's Column" draggable="false">
           <div class="station__hl" aria-hidden="true"></div>
@@ -147,10 +151,6 @@
           </div>
         </div>
         <div class="station__panel">
-          <div class="station__head">
-            <p class="eyebrow">The inscription · <span data-content="inscription.ref"></span></p>
-            <h2 id="inscription-title">Read the stone</h2>
-          </div>
           <ol class="station__lines"></ol>
           <p class="station__notes" aria-live="polite"></p>
         </div>
@@ -186,7 +186,7 @@
 
         <div class="namebuilder card" id="namebuilder" aria-labelledby="nb-title">
           <h3 id="nb-title">His name</h3>
-          <p class="muted">An emperor’s official name grew with every victory and office.</p>
+          <p class="muted">Every win and every office added a little more to his official name. Slide through his reign and watch it grow.</p>
           <label class="namebuilder__year">
             <span>AD</span>
             <output class="namebuilder__ad">113</output>
@@ -228,13 +228,13 @@
     <!-- ───────────── the empire ───────────── -->
     <section class="wrap empire" id="empire" aria-labelledby="empire-title">
       <div class="sectionhead">
-        <h2 id="empire-title">The empire at its height</h2>
+        <h2 id="empire-title">The empire he left behind</h2>
         <div class="segmented" role="radiogroup" aria-label="Which map">
           <button type="button" role="radio" aria-checked="true" data-view="empire">Empire</button>
           <button type="button" role="radio" aria-checked="false" data-view="rome">City of Rome</button>
         </div>
       </div>
-      <p class="lead empire__lead">Eutropius says Trajan spread the empire’s bounds <span class="la-word" data-gloss="longe lateque: far and wide" tabindex="0">longe lateque</span>. His reign, and the works he built across it.</p>
+      <p class="lead empire__lead">The bridge was only one of Trajan’s projects. Eutropius says he pushed the empire’s borders out <span class="la-word" data-gloss="longe lateque: far and wide" tabindex="0">longe lateque</span>, “far and wide”, and he built all over it too.</p>
 
       <div class="map">
         <div class="map__frame">
@@ -260,18 +260,18 @@
     <!-- ───────────── sources ───────────── -->
     <section class="wrap sources" id="sources" aria-labelledby="sources-title">
       <div class="sectionhead">
-        <h2 id="sources-title">In their own words</h2>
+        <h2 id="sources-title">What the Romans said</h2>
       </div>
-      <p class="lead">What the Romans wrote about Trajan and his column.</p>
+      <p class="lead">Most of what we know about Trajan comes from a handful of writers. Here they are in their own Latin, with a translation alongside.</p>
       <div class="reading"></div>
 
       <div class="sectionhead sectionhead--sub"><h3>Cassius Dio</h3></div>
-      <p class="prose muted">A Roman senator from Bithynia, Dio wrote his history in Greek a century after Trajan. These passages are from Earnest Cary’s translation (1925).</p>
+      <p class="prose muted">Dio was a Roman senator from what is now Turkey, and he wrote his history in Greek about a hundred years after Trajan died. These passages come from Earnest Cary’s 1925 translation.</p>
       <div class="dio" id="dio"></div>
 
-      <div class="sectionhead sectionhead--sub"><h3>Read the abbreviations</h3></div>
+      <div class="sectionhead sectionhead--sub"><h3>Test yourself</h3></div>
       <article class="card drill" id="drill">
-        <p class="muted">Romans carved as few letters as they could.</p>
+        <p class="muted">By now you’ve seen these all over the stone and the coins. Can you remember what they stand for?</p>
         <p class="drill__abbr" lang="la"></p>
         <div class="drill__choices"></div>
         <p class="drill__result" aria-live="polite"></p>

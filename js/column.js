@@ -392,7 +392,7 @@ export async function mountColumn({ stage, canvas, keyScenes, onScene, onReady }
       read: { y: readY, dist: fit(band * 7) + radius, lift: -band * 0.8 },
       full: { y: shaftH * 0.5, dist: fit(shaftH + band * 15) * 1.06 + radius, lift: 0 },
       base: { y: -band * 1.2 - D * 0.55, dist: fit(D * 1.25 + band * 4.5) + D, lift: band * 0.6 },
-      top: { y: shaftH + band * 3.2, dist: fit(band * 10) + D, lift: -band * 1.2 },
+      top: { y: shaftH + band * 3.8, dist: fit(band * 11.5) + D, lift: -band * 1.2 },
     };
     const I = timeline.INTRO, O = 1 - timeline.OUTRO;
     // [progress, view] keyframes; between two, the camera eases.

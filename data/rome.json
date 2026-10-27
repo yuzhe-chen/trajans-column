@@ -22,7 +22,7 @@
    "lat": 41.8946,
    "years": "c. 106–112",
    "kind": "trajanic",
-   "summary": "The largest of the imperial forums, a great colonnaded square with a gilded equestrian statue of Trajan at its centre. It was built with the spoils of the Dacian Wars and dedicated in 112."
+   "summary": "The biggest of the imperial forums, a huge colonnaded square with a gilded statue of Trajan on horseback in the middle. It was paid for with loot from the Dacian Wars and dedicated in 112."
   },
   {
    "id": "basilica-ulpia",
@@ -32,7 +32,7 @@
    "lat": 41.8954,
    "years": "c. 106–112",
    "kind": "trajanic",
-   "summary": "A vast hall for law courts and business across the north-west end of the Forum. It took its name from Trajan's family name, Ulpius."
+   "summary": "A vast hall for law courts and business across the end of the forum. It was named after Trajan’s family, the Ulpii."
   },
   {
    "id": "trajans-column",
@@ -42,7 +42,7 @@
    "lat": 41.8958,
    "years": "113",
    "kind": "trajanic",
-   "summary": "A 30 m marble column carved with a spiral frieze of the Dacian Wars, dedicated in May 113 between two libraries behind the Basilica Ulpia. Trajan's ashes were later placed in its base."
+   "summary": "The column itself, carved with the Dacian Wars and dedicated in May 113. It stood between two libraries behind the Basilica Ulpia, and Trajan’s ashes were later put in its base."
   },
   {
    "id": "markets-of-trajan",
@@ -52,7 +52,7 @@
    "lat": 41.8957,
    "years": "c. 100–110",
    "kind": "trajanic",
-   "summary": "A brick complex of shops, halls and offices climbing the Quirinal slope behind the Forum. Much of it still stands and houses a museum."
+   "summary": "A brick complex of shops, halls and offices climbing the Quirinal Hill behind the forum. A lot of it is still standing, and today it’s a museum."
   },
   {
    "id": "baths-of-trajan",
@@ -62,7 +62,7 @@
    "lat": 41.8922,
    "years": "c. 104–109",
    "kind": "trajanic",
-   "summary": "Huge public baths on the Oppian Hill, built over part of Nero's Golden House and opened in 109. Only fragments, such as exedrae in the Colle Oppio park, survive."
+   "summary": "Huge public baths on the Oppian Hill, built over part of Nero’s Golden House and opened in 109. Only pieces survive, like the curved walls in the Colle Oppio park."
   },
   {
    "id": "temple-divine-trajan",
@@ -72,7 +72,7 @@
    "lat": 41.8963,
    "years": "after 117 (under Hadrian)",
    "kind": "trajanic",
-   "summary": "Hadrian built a temple to Trajan and his wife Plotina after their deaths. It is traditionally placed just north of the Column (around today's Palazzo Valentini), but it has never been securely found and its site is still debated.",
+   "summary": "After Trajan and his wife Plotina died, Hadrian built a temple to them. It’s usually placed just north of the column, near today’s Palazzo Valentini, but nobody has found it for certain.",
    "approximate": true
   },
   {
@@ -83,7 +83,7 @@
    "lat": 41.905,
    "years": "109",
    "kind": "trajanic",
-   "summary": "An artificial basin for staged sea battles, inaugurated in 109, on the Vatican plain west of the Tiber. Its exact site is uncertain; remains found north-west of Castel Sant'Angelo (Hadrian's Mausoleum) are usually identified with it.",
+   "summary": "A man-made lake for staging sea battles, opened in 109 on the Vatican side of the Tiber. Its exact spot is uncertain, but remains north-west of Castel Sant’Angelo are usually thought to be it.",
    "approximate": true
   },
   {
@@ -94,7 +94,7 @@
    "lat": 41.8886,
    "years": "109",
    "kind": "trajanic",
-   "summary": "Trajan's aqueduct arrived on the Janiculum Hill, where its water drove mills before supplying the district across the Tiber. It was opened in June 109."
+   "summary": "This is where Trajan’s aqueduct arrived, on the Janiculum Hill. Its water turned mills here before supplying the neighbourhood across the Tiber. It opened in June 109."
   },
   {
    "id": "colosseum",
@@ -104,7 +104,7 @@
    "lat": 41.8903,
    "years": "70s–80",
    "kind": "landmark",
-   "summary": "The Flavian Amphitheatre, finished in AD 80, about 20 years before Trajan came to power. Trajan celebrated his Dacian victory with games said to have lasted 123 days, many of them held here."
+   "summary": "The Flavian Amphitheatre, finished in AD 80, about twenty years before Trajan became emperor. He celebrated beating Dacia with games said to have lasted 123 days, and a lot of them happened here."
   },
   {
    "id": "capitoline",
@@ -114,7 +114,7 @@
    "lat": 41.8933,
    "years": null,
    "kind": "landmark",
-   "summary": "The religious heart of Rome, crowned by the Temple of Jupiter Best and Greatest. The inscription on Trajan's Column says a hill was cut away to make room for his Forum, traditionally the ridge that joined the Capitoline to the Quirinal."
+   "summary": "The religious heart of Rome, with the Temple of Jupiter Best and Greatest on top. The inscription on the column says a hill was cut away to make room for the forum, and that’s usually taken to be the ridge between the Capitoline and the Quirinal."
   },
   {
    "id": "forum-romanum",
@@ -124,7 +124,7 @@
    "lat": 41.8922,
    "years": null,
    "kind": "landmark",
-   "summary": "The old civic centre of Rome, crowded with temples, law courts and the Senate House. The imperial forums, including Trajan's, were built beside it as it ran out of space."
+   "summary": "Rome’s old city centre, packed with temples, law courts and the Senate House. When it ran out of room, emperors built new forums beside it, and Trajan’s was the last."
   },
   {
    "id": "tiber-island",
@@ -134,7 +134,7 @@
    "lat": 41.8908,
    "years": null,
    "kind": "landmark",
-   "summary": "A small island in the Tiber, home to a temple of Aesculapius, the god of healing. It helps orient the river bend below the Capitoline."
+   "summary": "A small island in the Tiber with a temple to Aesculapius, the god of healing. It’s a handy landmark for the bend in the river below the Capitoline."
   }
  ],
  "tiber": {

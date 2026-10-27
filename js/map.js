@@ -189,14 +189,23 @@ export async function mountMap(root) {
 
   // ── zoom ──
   let k = 1;
+  // Clicking in the map wakes up wheel and pinch zoom; leaving it puts them back to sleep.
+  let active = false;
+  const frameEl = root.querySelector('.map__frame');
+  const setActive = (on) => { active = on; frameEl.classList.toggle('is-active', on); };
+  frameEl.addEventListener('pointerdown', () => setActive(true));
+  frameEl.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') setActive(false); });
+  document.addEventListener('pointerdown', (e) => { if (!frameEl.contains(e.target)) setActive(false); });
   let view = 'empire';
   const saved = { empire: d3.zoomIdentity, rome: d3.zoomIdentity };
   const zoom = d3.zoom()
     .scaleExtent([1, 14])
     .translateExtent([[-W * 0.1, -H * 0.1], [W * 1.1, H * 1.1]])
-    // Fully zoomed out, the wheel scrolls the page instead of the map.
+    // The wheel and a pinch only work on the map once it has been clicked;
+    // until then they scroll the page as usual. Dragging always pans.
     .filter((event) => {
-      if (event.type === 'wheel') return !(k <= 1.001 && event.deltaY > 0);
+      if (event.type === 'wheel') return active;
+      if (event.type.startsWith('touch')) return active;
       return !event.button;
     })
     .on('zoom', (event) => {

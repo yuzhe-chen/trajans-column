@@ -5,7 +5,7 @@
   "place": "Colonia Agrippina (Cologne)",
   "lon": 6.9528,
   "lat": 50.9364,
-  "text": "Nerva, who had adopted Trajan in 97, died in January 98. Trajan was in Germany—at Cologne, according to the historian Eutropius—when the news reached him, and he stayed on the Rhine and Danube frontiers for more than a year before entering Rome in 99."
+  "text": "Nerva had adopted Trajan in 97 and died in January 98. Trajan was in Germany when the news reached him (at Cologne, according to Eutropius). He stayed on the Rhine and Danube frontiers for more than a year and only arrived in Rome in 99."
  },
  {
   "year": "101–102",
@@ -13,7 +13,7 @@
   "place": "Tapae, near the Iron Gates of Transylvania pass (approximate)",
   "lon": 22.79,
   "lat": 45.48,
-  "text": "Trajan crossed the Danube against King Decebalus of Dacia and won a hard-fought battle at Tapae in 101. After further fighting, Decebalus asked for peace in 102 and became a Roman client king.",
+  "text": "Trajan crossed the Danube to fight King Decebalus of Dacia and won a hard battle at Tapae in 101. The fighting went on into the next year, until Decebalus asked for peace in 102 and agreed to rule as a king loyal to Rome.",
   "approximate": true
  },
  {
@@ -22,7 +22,7 @@
   "place": "Sarmizegetusa Regia",
   "lon": 23.3093,
   "lat": 45.6219,
-  "text": "When Decebalus broke the peace, Trajan returned in 105, crossing the Danube on Apollodorus' new bridge at Drobeta. The Dacian capital, Sarmizegetusa Regia, fell in 106; Decebalus killed himself rather than be captured, and Dacia became a Roman province."
+  "text": "Decebalus didn’t keep the peace for long, so Trajan came back in 105, this time crossing the Danube on Apollodorus’ new bridge at Drobeta. The Dacian capital, Sarmizegetusa Regia, fell in 106. Decebalus killed himself rather than be caught, and Dacia became a Roman province."
  },
  {
   "year": 106,
@@ -30,15 +30,15 @@
   "place": "Bostra",
   "lon": 36.4806,
   "lat": 32.5183,
-  "text": "After the death of the Nabataean king Rabbel II, the governor of Syria, Aulus Cornelius Palma, annexed his kingdom, apparently with little or no fighting. It became the province of Arabia, with its capital at Bostra; coins called it \"Arabia acquired\" (Arabia adquisita) rather than conquered."
+  "text": "When Rabbel II, the last king of the Nabataeans, died, the governor of Syria, Aulus Cornelius Palma, took over his kingdom, probably with little or no fighting. It became the province of Arabia, with its capital at Bostra. That’s why the coins say Arabia was “acquired” (adquisita) and not conquered."
  },
  {
   "year": 113,
-  "title": "Trajan's Column dedicated",
+  "title": "Trajan’s Column dedicated",
   "place": "Rome",
   "lon": 12.4842,
   "lat": 41.8958,
-  "text": "The Column, carved with the story of the Dacian Wars, was dedicated in May 113 in the new Forum of Trajan. That autumn Trajan left Rome for the East; he never returned."
+  "text": "The column, carved with the story of the Dacian Wars, was dedicated in May 113 in the new Forum of Trajan. That autumn Trajan left Rome for the East, and he never came back."
  },
  {
   "year": 114,
@@ -46,7 +46,7 @@
   "place": "Elegeia, Armenia (approximate)",
   "lon": 41.12,
   "lat": 39.95,
-  "text": "Rome and Parthia had agreed that Armenia's king should be a Parthian prince approved by Rome, but Parthia crowned Parthamasiris without asking. Trajan marched in; at Elegeia he refused to recognise Parthamasiris, who was killed soon afterwards, and Armenia was made a Roman province.",
+  "text": "Rome and Parthia had agreed that Armenia’s king would be a Parthian prince approved by Rome, but Parthia crowned Parthamasiris without asking. Trajan marched in. At Elegeia he refused to accept Parthamasiris, who was killed soon after, and Armenia was made a Roman province.",
   "approximate": true
  },
  {
@@ -55,7 +55,7 @@
   "place": "Antioch",
   "lon": 36.1817,
   "lat": 36.2047,
-  "text": "While Trajan was wintering at Antioch after campaigning in northern Mesopotamia, a great earthquake devastated the city (usually dated to December 115). According to the historian Cassius Dio, Trajan escaped through a window with minor injuries, but many people died, including one of the consuls."
+  "text": "Trajan was spending the winter at Antioch when a huge earthquake wrecked the city, probably in December 115. Cassius Dio says Trajan climbed out through a window with only minor injuries, but many people died, including one of the consuls."
  },
  {
   "year": 116,
@@ -63,7 +63,7 @@
   "place": "Ctesiphon",
   "lon": 44.5806,
   "lat": 33.0936,
-  "text": "Trajan advanced down the Euphrates and Tigris and captured the Parthian capital, Ctesiphon, in 116, the year in which he took the title Parthicus (\"conqueror of the Parthians\"). New provinces of Mesopotamia and Assyria were declared."
+  "text": "Trajan marched down the Euphrates and the Tigris and captured the Parthian capital, Ctesiphon, in 116. That was the year he took the title Parthicus, “conqueror of the Parthians”, and announced two new provinces, Mesopotamia and Assyria."
  },
  {
   "year": 116,
@@ -71,7 +71,7 @@
   "place": "Charax Spasinou (Mesene)",
   "lon": 47.578,
   "lat": 30.8947,
-  "text": "Trajan sailed on to the head of the Persian Gulf, where the king of Characene submitted to him. Cassius Dio says that, watching a ship leave for India, he wished he were young enough to follow Alexander the Great—but revolts were already breaking out behind him."
+  "text": "He sailed on to the top of the Persian Gulf, where the king of Characene surrendered to him. Cassius Dio says that when Trajan watched a ship leave for India, he wished he were young enough to follow Alexander the Great. But revolts were already breaking out behind him."
  },
  {
   "year": 117,
@@ -79,6 +79,6 @@
   "place": "Selinus, Cilicia (Gazipaşa, Turkey)",
   "lon": 32.283,
   "lat": 36.2583,
-  "text": "After failing to capture the desert city of Hatra and falling ill, Trajan set out for Rome, but he suffered a stroke and died at Selinus in Cilicia in early August 117. Hadrian, whom he was said to have adopted on his deathbed, succeeded him and soon gave up Armenia, Mesopotamia and Assyria."
+  "text": "Trajan failed to take the desert city of Hatra and fell ill. He set out for Rome, but he had a stroke and died at Selinus in Cilicia in early August 117. Hadrian, who was said to have been adopted on Trajan’s deathbed, took over and soon gave up Armenia, Mesopotamia and Assyria."
  }
 ]

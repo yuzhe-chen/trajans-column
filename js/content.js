@@ -15,22 +15,22 @@ export const site = {
   latin: 'Columna Traiani',
   dedicated: 'Rome, May AD 113',
   intro:
-    'A hundred Roman feet of marble, wrapped from foot to capital in one carved story: two wars, 155 scenes and some 2,600 figures.',
+    'A hundred Roman feet of marble with one long story carved around it, from the bottom all the way to the top.',
 };
 
 /** The opening section: a lead paragraph, two short ones, and the facts panel. */
 export const overview = {
   lead:
-    'In AD 113 the Senate and People of Rome dedicated a column to the emperor Trajan in the heart of his new forum. Around it, in a band of relief that winds twenty-three times from foot to capital, runs the story of how he conquered Dacia.',
+    'In AD 113 the Senate and People of Rome put up a column for the emperor Trajan in the middle of his new forum. A band of carving winds around it twenty-three times, and it tells the story of how he conquered Dacia.',
   body: [
-    'The column was paid for with the spoils of two wars fought north of the Danube, in AD 101–102 and 105–106, against the Dacian king Decebalus. It stood in a small courtyard between two libraries, one Greek and one Latin, behind the great hall of the Basilica Ulpia. Its architect was very probably Apollodorus of Damascus, who also designed the forum and the bridge over the Danube.',
-    'The story reads upward, left to right, in about 190 metres of carving. Trajan appears in it some sixty times: speaking to the army, sacrificing, receiving envoys, inspecting forts. Battles take up surprisingly little of it. Most of the frieze shows soldiers marching, building camps, roads and bridges: the war as the army that fought it wanted to be remembered.',
-    'When Trajan died in 117 his ashes were placed in a golden urn in a chamber inside the pedestal. Eutropius says he was the only emperor buried inside the city. His bronze statue on top was lost in the Middle Ages; Pope Sixtus V put up the statue of St Peter that stands there now in 1588.',
+    'Dacia was a kingdom north of the Danube, roughly where Romania is today. Trajan fought two wars against its king, Decebalus, in 101–102 and again in 105–106, and the gold he brought home paid for the forum and everything in it. The column stood in a small courtyard between two libraries, one for Greek books and one for Latin, behind a huge hall called the Basilica Ulpia. Its architect was probably Apollodorus of Damascus, the same man who designed the forum and Trajan’s bridge over the Danube.',
+    'You read the story from the bottom up, left to right, and it runs for about 190 metres. Trajan himself shows up around sixty times. He gives speeches, makes sacrifices, meets envoys and checks on his forts. What surprises most people is how little of it is fighting. Most of the frieze shows soldiers marching, building camps and clearing roads, which is how the army wanted to be remembered.',
+    'Trajan died in 117. His ashes were put in a golden urn in a room inside the base, and the historian Eutropius says he was the only emperor ever buried inside the city. A bronze statue of him once stood on top. It disappeared in the Middle Ages, and in 1588 Pope Sixtus V replaced it with the St Peter you can see there now.',
   ],
   facts: [
-    ['Height', 'Shaft 100 Roman feet (about 30 m); about 35 m with the pedestal'],
-    ['Frieze', 'About 190 m long, 23 turns, 155 scenes, some 2,600 figures'],
-    ['Material', 'About 20 drums of Luna (Carrara) marble, each over 30 tonnes'],
+    ['Height', 'The shaft is 100 Roman feet, about 30 m. With the base it’s about 35 m.'],
+    ['Frieze', 'About 190 m long, winding 23 times, with 155 scenes and around 2,600 figures'],
+    ['Material', 'Roughly 20 blocks of Luna marble, each over 30 tonnes'],
     ['Inside', 'A spiral staircase of 185 steps, lit by narrow slit windows'],
     ['Dedicated', 'May AD 113, by the Senate and People of Rome'],
   ],
@@ -50,7 +50,7 @@ export const keyScenes = [
     title: 'The army crosses the Danube',
     latin: 'Danuvius',
     text:
-      'Spring, AD 101. The legions march out of the province of Moesia over two bridges of boats. Out of the river rises its god, Danuvius, bearded and half-submerged, steadying the crossing with one arm. The First Dacian War has begun.',
+      'It’s spring, AD 101, and the legions are marching into Dacia over two bridges made of boats. The river god Danuvius rises out of the water with a long beard and seems to steady the crossing with his arm. This is where the first war begins.',
   },
   {
     scene: 37,
@@ -58,7 +58,7 @@ export const keyScenes = [
     title: 'Cavalry against the Sarmatians',
     latin: 'Sarmatae',
     text:
-      'In the winter of 101–102 Decebalus and his Sarmatian allies struck back across the Danube into Roman territory. The Sarmatian cataphracts wear scale armour from head to foot, and so do their horses; here Roman horsemen ride them down, and the armoured riders tumble from their saddles.',
+      'That winter Decebalus and his Sarmatian allies hit back across the river into Roman land. The Sarmatian riders are covered in scale armour from head to toe, and so are their horses. Here the Roman cavalry chases them down and knocks them out of the saddle.',
   },
   {
     scene: 71,
@@ -66,7 +66,7 @@ export const keyScenes = [
     title: 'Storming a Dacian fortress',
     latin: 'Testudo',
     text:
-      'Legionaries lock their shields over their heads into a testudo, a “tortoise”, and push up to the walls under a hail of stones. The Dacian strongholds sat high in the Carpathian mountains and had to be taken one by one.',
+      'Legionaries hold their shields over their heads to make a testudo, a “tortoise”, and push up against the walls while the defenders throw stones down on them. The Dacians built their forts high in the Carpathian mountains, and the Romans had to take them one at a time.',
   },
   {
     scene: 78,
@@ -74,7 +74,7 @@ export const keyScenes = [
     title: 'Victory writes on a shield',
     latin: 'Victoria',
     text:
-      'Between two trophies of captured Dacian armour, a winged Victory writes on a shield. Decebalus has surrendered (AD 102), the first war is over, and the frieze pauses here: everything above her is the second war.',
+      'Decebalus surrenders in AD 102 and the first war is over. To mark it, a winged Victory stands between two piles of captured armour and writes on a shield. She splits the frieze in half, and everything above her belongs to the second war.',
   },
   {
     scene: 99,
@@ -82,7 +82,7 @@ export const keyScenes = [
     title: 'Sacrifice at the Danube bridge',
     latin: 'Pons Traiani',
     text:
-      'AD 105. Trajan pours an offering at an altar while a bull is led to sacrifice. Behind them stands the great bridge over the Danube at Drobeta: stone piers carrying timber arches, built by Apollodorus of Damascus so that the army could cross in any season.',
+      'Three years later, in AD 105, Trajan is back. He pours an offering at an altar while a bull is led up to be sacrificed. Behind them you can see his new bridge over the Danube at Drobeta, with stone piers and wooden arches, built so the army could cross whatever the weather.',
   },
   {
     scene: 145,
@@ -90,7 +90,7 @@ export const keyScenes = [
     title: 'The death of Decebalus',
     latin: 'Decebalus',
     text:
-      'AD 106. Hunted down by Roman cavalry, the Dacian king kneels under a tree and cuts his own throat rather than be led through Rome in a triumph. The trooper reaching for him may be Tiberius Claudius Maximus, whose tombstone, found in Greece in 1965, boasts that he captured Decebalus and brought his head to Trajan.',
+      'By AD 106 the Dacian king has lost. Roman cavalry are closing in, so he kneels under a tree and cuts his own throat rather than be paraded through Rome. The rider reaching for him might be Tiberius Claudius Maximus. His gravestone turned up in Greece in 1965, and it boasts that he was the one who caught Decebalus and brought his head to Trajan.',
   },
   {
     scene: 155,
@@ -98,7 +98,7 @@ export const keyScenes = [
     title: 'Dacia emptied',
     latin: 'Finis',
     text:
-      'The last scene. Dacian families walk away with their cattle and goats. Whether they are refugees leaving the new Roman province or people being moved off their land is still argued over; either way, Dacia now belonged to Rome.',
+      'The last scene shows Dacian families walking away with their cattle and goats. Historians still argue about whether they’re refugees leaving or people being forced off their land. Either way, Dacia now belonged to Rome.',
   },
 ];
 
@@ -113,45 +113,45 @@ export const keyScenes = [
 export const inscription = {
   ref: 'CIL VI 960',
   intro:
-    'On the pedestal, above the door to Trajan’s tomb, two winged Victories hold up the dedication. Its letters are the most admired capitals of antiquity, cut in V-section so they hold the light, and probably painted on with a flat brush before they were carved. Modern type designers still copy them; the typeface called Trajan is drawn from this stone.',
+    'Back at the bottom of the column, over the door to Trajan’s tomb, two winged Victories hold up the dedication. People have admired these letters for two thousand years. They were probably painted on with a flat brush first, then cut in a V shape so they catch the light, and the typeface called Trajan is copied straight from them.',
   note:
-    'The last line has puzzled readers since antiquity. Cassius Dio took it literally: the column is as tall as the hill that was dug away to make the forum. Excavation suggests the ground was never that high here, so what was cleared, and how much, is still argued over.',
+    'The last line has puzzled readers since ancient times. Cassius Dio took it literally and said the column is as tall as the hill that was dug away to build the forum. Excavations suggest the ground here was never that high, so nobody is quite sure what was cleared away, or how much.',
   lines: [
     {
       carved: 'SENATVS·POPVLVSQVE·ROMANVS',
       expanded: 'Senatus populusque Romanus',
       english: 'The Senate and People of Rome',
-      gloss: [['-que', 'enclitic “and”: populus + que, “and the people”']],
+      gloss: [['-que', 'means “and”, stuck onto the end of the word: populus + que, “and the people”']],
     },
     {
       carved: 'IMP·CAESARI·DIVI·NERVAE·F·NERVAE',
       expanded: 'Imp(eratori) Caesari divi Nervae f(ilio) Nervae',
       english: 'to the Emperor Caesar Nerva, son of the deified Nerva,',
-      gloss: [['IMP', 'imperator, “commander, emperor”; dative, “to the emperor”'], ['DIVI', 'divus, “deified”: Nerva was made a god at his death'], ['F', 'filius, “son”: Trajan was Nerva’s adopted son']],
+      gloss: [['IMP', 'imperator, “commander” or “emperor”, in the dative: “to the emperor”'], ['DIVI', 'divus, “deified”, since Nerva was made a god when he died'], ['F', 'filius, “son”. Trajan was Nerva’s adopted son']],
     },
     {
       carved: 'TRAIANO·AVG·GERM·DACICO·PONTIF',
       expanded: 'Traiano Aug(usto) Germ(anico) Dacico pontif(ici)',
-      english: 'Trajan Augustus, victor over the Germans and the Dacians, chief',
-      gloss: [['AVG', 'Augustus, the title every emperor bore'], ['GERM', 'Germanicus, a victory title (AD 97)'], ['DACICO', 'Dacicus, a victory title (AD 102)']],
+      english: 'Trajan Augustus, conqueror of the Germans and the Dacians, chief',
+      gloss: [['AVG', 'Augustus, a title every emperor had'], ['GERM', 'Germanicus, a victory title he took in AD 97'], ['DACICO', 'Dacicus, a victory title he took in AD 102']],
     },
     {
       carved: 'MAXIMO·TRIB·POT·XVII·IMP·VI·COS·VI·P·P',
       expanded: 'maximo trib(unicia) pot(estate) XVII imp(eratori) VI co(n)s(uli) VI p(atri) p(atriae)',
-      english: 'priest, in his seventeenth year of tribunician power, six times hailed imperator, six times consul, father of his country,',
-      gloss: [['PONTIF MAXIMO', 'pontifex maximus, “chief priest”, split across two lines'], ['TRIB POT XVII', 'tribunicia potestas, renewed every year: the seventeenth dates the stone to AD 113'], ['P P', 'pater patriae, “father of the fatherland”']],
+      english: 'priest, holding the power of a tribune for the seventeenth year, hailed as imperator six times, consul six times, father of his country,',
+      gloss: [['PONTIF MAXIMO', 'pontifex maximus, “chief priest”, split over two lines'], ['TRIB POT XVII', 'the tribune’s power was renewed every year, so the seventeenth one dates the stone to AD 113'], ['P P', 'pater patriae, “father of the fatherland”']],
     },
     {
       carved: 'AD·DECLARANDVM·QVANTAE·ALTITVDINIS',
       expanded: 'ad declarandum quantae altitudinis',
-      english: 'to show how great a height',
-      gloss: [['ad declarandum', 'ad + gerund, expressing purpose: “for showing”'], ['quantae altitudinis', 'genitive of description: “of how great a height”']],
+      english: 'to show how high',
+      gloss: [['ad declarandum', 'ad with a gerund shows purpose: “for showing”'], ['quantae altitudinis', 'a genitive of description, “of how great a height”']],
     },
     {
       carved: 'MONS·ET·LOCVS·TANT[IS·OPER]IBVS·SIT·EGESTVS',
       expanded: 'mons et locus tant[is oper]ibus sit egestus',
-      english: 'of hill and ground was cleared away for such great works.',
-      gloss: [['sit egestus', 'perfect passive subjunctive of egero, “carry out, remove”, in an indirect question'], ['[ ]', 'the stone is broken here; editors restore the lost letters']],
+      english: 'a hill and the ground were cleared away for such great works.',
+      gloss: [['sit egestus', 'perfect passive subjunctive of egero, “carry out” or “remove”, inside an indirect question'], ['[ ]', 'the stone is broken here, so editors fill in the missing letters']],
     },
   ],
 };
@@ -160,7 +160,7 @@ export const inscription = {
 export const coinsIntro = {
   title: 'Coins of the Optimus Princeps',
   text:
-    'Coins were the only pictures of the emperor most Romans ever saw, and their legends were written to be read in a glance. Read them the way the inscription is read: almost every word is cut short.',
+    'The same shortened Latin shows up on Trajan’s coins. For most Romans a coin was the only picture of the emperor they would ever see, and the writing around the edge was meant to be read at a glance.',
 };
 
 export const coins = [
@@ -170,18 +170,18 @@ export const coins = [
     date: 'AD 114–117',
     ref: 'RIC II 307',
     metal: 'Silver',
-    about: 'The column itself, on the pedestal with its two eagles, with Trajan’s statue on top holding a spear and a globe.',
+    about: 'This one shows the column itself. You can make out the base with its two eagles and Trajan’s statue on top, holding a spear and a globe.',
     obverse: {
       legend: 'IMP TRAIANO OPTIMO AVG GER DAC P M TR P',
       expanded: 'Imp(eratori) Traiano Optimo Aug(usto) Ger(manico) Dac(ico) p(ontifici) m(aximo) tr(ibunicia) p(otestate)',
-      english: 'To the Emperor Trajan the Best, Augustus, victor over the Germans and Dacians, chief priest, holding tribunician power',
-      gloss: [['OPTIMO', 'Optimus, “the Best”: part of his official name from AD 114'], ['TR P', 'tribunicia potestate']],
+      english: 'To the Emperor Trajan the Best, Augustus, conqueror of the Germans and Dacians, chief priest, holding the power of a tribune',
+      gloss: [['OPTIMO', 'Optimus, “the Best”, which became part of his official name in AD 114'], ['TR P', 'tribunicia potestate']],
     },
     reverse: {
       legend: 'COS VI P P S P Q R',
       expanded: 'co(n)s(uli) VI p(atri) p(atriae) S(enatus) P(opulus)q(ue) R(omanus)',
-      english: 'consul six times, father of his country; the Senate and People of Rome',
-      gloss: [['S P Q R', 'the Senate’s dedication, exactly like the column’s']],
+      english: 'consul six times, father of his country, from the Senate and People of Rome',
+      gloss: [['S P Q R', 'the Senate’s dedication, the same words that open the inscription']],
     },
   },
   {
@@ -190,17 +190,17 @@ export const coins = [
     date: 'c. AD 107',
     ref: 'RIC II 219',
     metal: 'Silver',
-    about: 'A Dacian in his peaked cap sits mourning on a pile of arms, a curved Dacian sword below him.',
+    about: 'A Dacian in his pointed cap sits on a pile of weapons with his head down, and his curved sword lies underneath him.',
     obverse: {
       legend: 'IMP TRAIANO AVG GER DAC P M TR P COS V P P',
       expanded: 'Imp(eratori) Traiano Aug(usto) Ger(manico) Dac(ico) p(ontifici) m(aximo) tr(ibunicia) p(otestate) co(n)s(uli) V p(atri) p(atriae)',
-      english: 'To the Emperor Trajan Augustus, victor over the Germans and Dacians, chief priest, holding tribunician power, consul five times, father of his country',
+      english: 'To the Emperor Trajan Augustus, conqueror of the Germans and Dacians, chief priest, holding the power of a tribune, consul five times, father of his country',
     },
     reverse: {
       legend: 'S P Q R OPTIMO PRINCIPI',
       expanded: 'S(enatus) P(opulus)q(ue) R(omanus) optimo principi',
-      english: 'The Senate and People of Rome, to the best of rulers',
-      gloss: [['OPTIMO PRINCIPI', 'dative, “to the best leader”: the whole coin is addressed to Trajan']],
+      english: 'The Senate and People of Rome, to the best of leaders',
+      gloss: [['OPTIMO PRINCIPI', 'this is dative, “to the best leader”, so the whole coin is a gift addressed to Trajan']],
     },
   },
   {
@@ -209,17 +209,17 @@ export const coins = [
     date: 'c. AD 107–109',
     ref: 'RIC II 569',
     metal: 'Bronze',
-    about: 'Apollodorus’ bridge over the Danube, drawn as a single great arch with towers at each end and a boat passing underneath.',
+    about: 'Here is the bridge over the Danube, squeezed into one big arch with a tower at each end and a boat going underneath.',
     obverse: {
       legend: 'IMP CAES NERVAE TRAIANO AVG GER DAC P M TR P COS V P P',
       expanded: 'Imp(eratori) Caes(ari) Nervae Traiano Aug(usto) Ger(manico) Dac(ico) p(ontifici) m(aximo) tr(ibunicia) p(otestate) co(n)s(uli) V p(atri) p(atriae)',
-      english: 'To the Emperor Caesar Nerva Trajan Augustus, victor over the Germans and Dacians, chief priest, holding tribunician power, consul five times, father of his country',
+      english: 'To the Emperor Caesar Nerva Trajan Augustus, conqueror of the Germans and Dacians, chief priest, holding the power of a tribune, consul five times, father of his country',
     },
     reverse: {
       legend: 'S P Q R OPTIMO PRINCIPI · S C',
       expanded: 'S(enatus) P(opulus)q(ue) R(omanus) optimo principi · s(enatus) c(onsulto)',
-      english: 'The Senate and People of Rome, to the best of rulers; by decree of the Senate',
-      gloss: [['S C', 'senatus consulto: bronze coins carried the Senate’s authority']],
+      english: 'The Senate and People of Rome, to the best of leaders, by order of the Senate',
+      gloss: [['S C', 'senatus consulto. Bronze coins were issued on the Senate’s authority']],
     },
   },
   {
@@ -228,16 +228,16 @@ export const coins = [
     date: 'c. AD 103',
     ref: 'RIC II 528',
     metal: 'Bronze',
-    about: 'Victory, one foot on a helmet, fixes a shield inscribed VIC DAC to a palm tree: the same image that divides the two wars on the column.',
+    about: 'Victory rests one foot on a helmet and hangs a shield marked VIC DAC on a palm tree. It’s the same picture that splits the two wars on the column.',
     obverse: {
       legend: 'IMP CAES NERVAE TRAIANO AVG GER DAC P M TR P COS V P P',
       expanded: 'Imp(eratori) Caes(ari) Nervae Traiano Aug(usto) Ger(manico) Dac(ico) p(ontifici) m(aximo) tr(ibunicia) p(otestate) co(n)s(uli) V p(atri) p(atriae)',
-      english: 'To the Emperor Caesar Nerva Trajan Augustus, victor over the Germans and Dacians, chief priest, holding tribunician power, consul five times, father of his country',
+      english: 'To the Emperor Caesar Nerva Trajan Augustus, conqueror of the Germans and Dacians, chief priest, holding the power of a tribune, consul five times, father of his country',
     },
     reverse: {
       legend: 'S P Q R OPTIMO PRINCIPI · S C · VIC DAC',
       expanded: 'S(enatus) P(opulus)q(ue) R(omanus) optimo principi · s(enatus) c(onsulto) · Vic(toria) Dac(ica)',
-      english: 'The Senate and People of Rome, to the best of rulers; by decree of the Senate. “Dacian Victory”',
+      english: 'The Senate and People of Rome, to the best of leaders, by order of the Senate. “Victory over Dacia”',
       gloss: [['VIC DAC', 'Victoria Dacica, written on the shield']],
     },
   },
@@ -246,18 +246,18 @@ export const coins = [
     name: 'Sestertius, Arabia acquired',
     date: 'AD 106–111',
     metal: 'Orichalcum',
-    about: 'Arabia stands holding a branch, a camel at her feet. The Nabataean kingdom around Petra became the province of Arabia in AD 106.',
+    about: 'Arabia stands holding a branch with a camel at her feet. The kingdom around Petra became the Roman province of Arabia in AD 106.',
     obverse: {
       legend: 'IMP CAES NERVAE TRAIANO AVG GER DAC P M TR P COS V P P',
       expanded: 'Imp(eratori) Caes(ari) Nervae Traiano Aug(usto) Ger(manico) Dac(ico) p(ontifici) m(aximo) tr(ibunicia) p(otestate) co(n)s(uli) V p(atri) p(atriae)',
-      english: 'To the Emperor Caesar Nerva Trajan Augustus, victor over the Germans and Dacians, chief priest, holding tribunician power, consul five times, father of his country',
-      gloss: [['Note', 'this coin is worn; the legend given is the standard one for the type']],
+      english: 'To the Emperor Caesar Nerva Trajan Augustus, conqueror of the Germans and Dacians, chief priest, holding the power of a tribune, consul five times, father of his country',
+      gloss: [['Note', 'this coin is worn, so the legend given is the usual one for this type']],
     },
     reverse: {
       legend: 'S P Q R OPTIMO PRINCIPI · ARAB ADQVIS · S C',
       expanded: 'S(enatus) P(opulus)q(ue) R(omanus) optimo principi · Arab(ia) adquis(ita) · s(enatus) c(onsulto)',
-      english: 'The Senate and People of Rome, to the best of rulers. Arabia acquired. By decree of the Senate',
-      gloss: [['ARAB ADQVIS', 'Arabia adquisita, “acquired”, not “conquered”: the kingdom was annexed without a war']],
+      english: 'The Senate and People of Rome, to the best of leaders. Arabia acquired. By order of the Senate',
+      gloss: [['ARAB ADQVIS', 'Arabia adquisita. It says “acquired”, not “conquered”, because the kingdom was taken over without a war']],
     },
   },
   {
@@ -266,12 +266,12 @@ export const coins = [
     date: 'AD 112–113',
     ref: 'RIC II 257',
     metal: 'Gold',
-    about: 'The great gateway into Trajan’s Forum, with six columns and a six-horse chariot on its roof.',
+    about: 'This gold coin shows the main gateway into Trajan’s Forum, with six columns and a chariot pulled by six horses on the roof.',
     obverse: {
       legend: 'IMP TRAIANVS AVG GER DAC P M TR P COS VI P P',
       expanded: 'Imp(erator) Traianus Aug(ustus) Ger(manicus) Dac(icus) p(ontifex) m(aximus) tr(ibunicia) p(otestate) co(n)s(ul) VI p(ater) p(atriae)',
-      english: 'The Emperor Trajan Augustus, victor over the Germans and Dacians, chief priest, holding tribunician power, consul six times, father of his country',
-      gloss: [['TRAIANVS', 'nominative, not dative: this coin names him rather than dedicating to him']],
+      english: 'The Emperor Trajan Augustus, conqueror of the Germans and Dacians, chief priest, holding the power of a tribune, consul six times, father of his country',
+      gloss: [['TRAIANVS', 'this is nominative, not dative, so this coin just names him instead of dedicating itself to him']],
     },
     reverse: {
       legend: 'FORVM TRAIAN',
@@ -286,14 +286,14 @@ export const emperor = {
   name: 'Marcus Ulpius Traianus',
   facts: [
     ['Born', '18 September AD 53, at Italica, near Seville in Spain'],
-    ['Emperor', '28 January 98 – August 117'],
+    ['Emperor', '28 January 98 to August 117'],
     ['Died', 'August 117, at Selinus in Cilicia, aged 63'],
-    ['Successor', 'Hadrian, his cousin’s son and ward'],
+    ['Successor', 'Hadrian, his cousin’s son, whom he had raised'],
   ],
   text: [
-    'Trajan was the first emperor born outside Italy, the son of a Spanish-Roman family that had risen to the consulship. He made his name as a soldier, and was governing Upper Germany in 97 when the elderly emperor Nerva, under pressure from the army, adopted him as his son and heir. Three months later Nerva was dead. Trajan heard the news at Cologne and took his time coming to Rome.',
-    'He won the Senate over by treating it with respect, and the Senate gave him a title no emperor had had before: Optimus Princeps, “the best of rulers”. His wars doubled as building programmes, and Dacian gold paid for the forum, the markets, new baths, harbours, roads and aqueducts. His letters to Pliny, governor of Bithynia, show him answering questions about fire brigades, aqueducts and Christians in a few dry lines.',
-    'In 114 he turned east against Parthia, took Armenia and Mesopotamia, captured the Parthian capital Ctesiphon, and stood on the shore of the Persian Gulf. Then the new provinces rose in revolt, and Trajan, ill, set out for Rome and died on the way. Two and a half centuries later, Eutropius says, the Senate still hailed each new emperor with the wish that he be felicior Augusto, melior Traiano: “luckier than Augustus, better than Trajan”.',
+    'So who was the man on all these coins? Trajan was the first emperor born outside Italy. His family were Romans who had settled in Spain, and his father had already made it to consul. Trajan himself was a soldier first. In 97 he was governing part of Germany when the old emperor Nerva, under pressure from the army, adopted him as his son and heir. Three months later Nerva died. Trajan got the news at Cologne and was in no hurry to come to Rome.',
+    'When he did arrive, he treated the Senate with respect, and they loved him for it. They gave him a title no emperor had had before, Optimus Princeps, “the best of leaders”. The gold from Dacia paid for the forum, the markets, new baths, harbours, roads and aqueducts. His letters to his friend Pliny, who was governing a province in what is now Turkey, show him answering questions about fire brigades, water supplies and Christians in a few short, practical lines.',
+    'In 114 he turned east against Parthia. He took Armenia and Mesopotamia, captured the Parthian capital at Ctesiphon and made it all the way to the Persian Gulf. Then the new provinces rebelled behind him. Trajan fell ill, started for home, and died on the way. Two hundred and fifty years later, Eutropius says, the Senate still greeted each new emperor by wishing that he would be felicior Augusto, melior Traiano, “luckier than Augustus, better than Trajan”.',
   ],
 };
 
@@ -302,10 +302,10 @@ export const emperor = {
  * `from` is the year a title was first used.
  */
 export const titles = [
-  { abbr: 'GERM', full: 'Germanicus', english: 'victor over the Germans', from: 97 },
-  { abbr: 'DAC', full: 'Dacicus', english: 'victor over the Dacians', from: 102 },
-  { abbr: 'OPTIMVS', full: 'Optimus', english: 'the Best (as an official name)', from: 114 },
-  { abbr: 'PARTH', full: 'Parthicus', english: 'victor over the Parthians', from: 116 },
+  { abbr: 'GERM', full: 'Germanicus', english: 'conqueror of the Germans', from: 97 },
+  { abbr: 'DAC', full: 'Dacicus', english: 'conqueror of the Dacians', from: 102 },
+  { abbr: 'OPTIMVS', full: 'Optimus', english: 'the Best', from: 114 },
+  { abbr: 'PARTH', full: 'Parthicus', english: 'conqueror of the Parthians', from: 116 },
 ];
 
 /** Consulships by year, for the name builder (COS II in 98 … COS VI in 112). */
@@ -318,10 +318,10 @@ export const bridge = {
   title: 'The bridge over the Danube',
   latin: 'Pons Traiani',
   lead:
-    'For the second war Trajan needed a way into Dacia that would not depend on boats or on the river freezing. His architect Apollodorus of Damascus built the longest bridge of the Roman world.',
+    'Before the second war, Trajan needed a way into Dacia that didn’t depend on boats or on the river freezing over. So Apollodorus of Damascus built him the longest bridge in the Roman world.',
   body: [
-    'It crossed the Danube between Drobeta, now Drobeta-Turnu Severin in Romania, and Pontes on the Serbian bank, at a point where the river runs through a narrow, deep channel below the Iron Gates. Stone piers carried a timber roadway on wooden arches, a little over a kilometre long. It was finished in AD 105, just in time for the second war, and it appears behind Trajan’s sacrifice in scene XCIX of the column and on his coins.',
-    'It did not last long as a bridge. Hadrian, fearing the Dacians’ neighbours could use it as easily as the Roman army, had the wooden superstructure taken down. The stumps of the piers still stand at the water’s edge on both banks.',
+    'It crossed the Danube between Drobeta, now Drobeta-Turnu Severin in Romania, and Pontes on the Serbian side, just downstream of the gorge called the Iron Gates. Stone piers held up a wooden road on wooden arches, and the whole thing was a little over a kilometre long. It was finished in AD 105, just in time for the war, and it shows up on the column behind Trajan’s sacrifice in scene XCIX, and on his coins too.',
+    'It didn’t last long. Hadrian worried that Rome’s enemies could use it just as easily as the Roman army, so he had the wooden part taken down. The stumps of the piers are still there on both banks.',
   ],
   facts: [
     ['Architect', 'Apollodorus of Damascus'],
@@ -337,139 +337,138 @@ export const bridge = {
     ],
   },
   images: [
-    { src: 'assets/misc/bridge-relief.jpg', caption: 'The bridge behind Trajan’s sacrifice, scene XCIX' },
-    { src: 'assets/misc/bridge-reconstruction.jpg', caption: 'A reconstruction of the bridge' },
-    { src: 'assets/misc/bridge-ruins.jpg', caption: 'What is left: a pier at Drobeta-Turnu Severin' },
+    { src: 'assets/misc/bridge-relief.jpg', caption: 'The bridge on the column, behind Trajan’s sacrifice in scene XCIX' },
+    { src: 'assets/misc/bridge-reconstruction.jpg', caption: 'How the bridge might have looked' },
+    { src: 'assets/misc/bridge-ruins.jpg', caption: 'What’s left today: the piers on the Serbian bank' },
   ],
 };
 
 /** Abbreviations for the drill. */
 export const abbreviations = [
   ['SPQR', 'Senatus Populusque Romanus', 'the Senate and People of Rome'],
-  ['IMP', 'Imperator', 'commander; emperor'],
-  ['CAES', 'Caesar', 'Caesar, the family name that became a title'],
-  ['AVG', 'Augustus', 'the revered one; the emperor'],
+  ['IMP', 'Imperator', 'commander, emperor'],
+  ['CAES', 'Caesar', 'Caesar, a family name that became a title'],
+  ['AVG', 'Augustus', 'the revered one, the emperor'],
   ['F', 'filius', 'son'],
   ['DIVI F', 'divi filius', 'son of the deified'],
-  ['GERM', 'Germanicus', 'victor over the Germans'],
-  ['DAC', 'Dacicus', 'victor over the Dacians'],
+  ['GERM', 'Germanicus', 'conqueror of the Germans'],
+  ['DAC', 'Dacicus', 'conqueror of the Dacians'],
   ['P M', 'Pontifex Maximus', 'chief priest'],
   ['TR P', 'Tribunicia Potestate', 'with the power of a tribune'],
   ['COS', 'Consul', 'consul'],
   ['P P', 'Pater Patriae', 'father of the fatherland'],
-  ['S C', 'Senatus Consulto', 'by decree of the Senate'],
-  ['OPT PRINC', 'Optimo Principi', 'to the best of rulers'],
+  ['S C', 'Senatus Consulto', 'by order of the Senate'],
+  ['OPT PRINC', 'Optimo Principi', 'to the best of leaders'],
   ['ARAB ADQ', 'Arabia Adquisita', 'Arabia acquired'],
-  ['VIC DAC', 'Victoria Dacica', 'Dacian victory'],
+  ['VIC DAC', 'Victoria Dacica', 'victory over Dacia'],
 ];
 
 /**
  * The sources, in their own words. `latin` texts get a parallel translation and
- * hover glosses for the words in `vocab`. `english` only (Cassius Dio wrote in
- * Greek) is shown as a quotation.
+ * hover glosses for the words in `vocab`.
  */
 export const readings = [
   {
     id: 'eutropius-8-2',
     title: 'The empire spread far and wide',
-    source: 'Eutropius, Breviarium 8.2 (c. AD 369)',
+    source: 'Eutropius, Breviarium 8.2 (written around AD 369)',
     latin: [
       'Successit ei Ulpius Crinitus Traianus, natus Italicae in Hispania, familia antiqua magis quam clara. Nam pater eius primum consul fuit. Imperator autem apud Agrippinam in Galliis factus est.',
       'Romani imperii, quod post Augustum defensum magis fuerat quam nobiliter ampliatum, fines longe lateque diffudit. Daciam Decibalo victo subegit, provincia trans Danubium facta.',
     ],
     english: [
-      'Nerva was succeeded by Ulpius Crinitus Trajan, born at Italica in Spain, of a family more ancient than famous; for his father was the first of it to be consul. He was made emperor at Agrippina (Cologne) in Gaul.',
-      'The Roman empire, which since Augustus had been defended rather than nobly enlarged, he spread far and wide. He conquered Dacia after defeating Decebalus, and made it a province beyond the Danube.',
+      'After Nerva came Ulpius Crinitus Trajan, who was born at Italica in Spain. His family was old rather than famous, since his father was the first of them to become consul. He was made emperor at Agrippina, which is Cologne, in Gaul.',
+      'Since Augustus, the Roman empire had mostly been defended rather than grown in any glorious way. Trajan pushed its borders out far and wide. He beat Decebalus, conquered Dacia, and made it a province on the far side of the Danube.',
     ],
     vocab: {
-      successit: 'succedo, succedere, successi — to follow, succeed (+ dative)',
-      natus: 'nascor, nasci, natus sum — to be born',
-      clara: 'clarus, -a, -um — famous',
-      defensum: 'defendo, defendere, defendi, defensus — to defend (perfect passive participle)',
-      ampliatum: 'amplio, ampliare — to enlarge',
-      fines: 'finis, finis m. — boundary; (plural) territory',
-      diffudit: 'diffundo, diffundere, diffudi — to spread out',
-      subegit: 'subigo, subigere, subegi — to subdue',
-      victo: 'vinco, vincere, vici, victus — to conquer (ablative absolute: “Decebalus having been conquered”)',
+      successit: 'succedo, succedere, successi: to follow, succeed (+ dative)',
+      natus: 'nascor, nasci, natus sum: to be born',
+      clara: 'clarus, -a, -um: famous',
+      defensum: 'defendo, defendere, defendi, defensus: to defend (perfect passive participle)',
+      ampliatum: 'amplio, ampliare: to enlarge',
+      fines: 'finis, finis m.: boundary; in the plural, territory',
+      diffudit: 'diffundo, diffundere, diffudi: to spread out',
+      subegit: 'subigo, subigere, subegi: to subdue',
+      victo: 'vinco, vincere, vici, victus: to conquer (ablative absolute, “with Decebalus conquered”)',
     },
   },
   {
     id: 'eutropius-8-5',
-    title: 'Buried beneath the column',
+    title: 'Buried under the column',
     source: 'Eutropius, Breviarium 8.5',
     latin: [
       'Inter Divos relatus est solusque omnium intra urbem sepultus est. Ossa conlata in urnam auream in foro, quod aedificavit, sub columna posita sunt, cuius altitudo CXLIV pedes habet.',
       'Huius tantum memoriae delatum est, ut usque ad nostram aetatem non aliter in senatu principibus adclametur, nisi “Felicior Augusto, melior Traiano”.',
     ],
     english: [
-      'He was enrolled among the gods, and he alone of them all was buried inside the city. His bones, gathered into a golden urn, were placed in the forum that he built, beneath the column, whose height is 144 feet.',
-      'So much honour has been paid to his memory that, down to our own time, emperors are acclaimed in the Senate in no other way than: “Luckier than Augustus, better than Trajan.”',
+      'He was made a god, and he was the only one of them all to be buried inside the city. His bones were gathered into a golden urn and placed in the forum he built, under the column, which is 144 feet tall.',
+      'His memory was honoured so much that even in our own day the Senate greets every emperor the same way: “Luckier than Augustus, better than Trajan.”',
     ],
     vocab: {
-      relatus: 'refero, referre, rettuli, relatus — to enrol, place among',
-      sepultus: 'sepelio, sepelire, sepelivi, sepultus — to bury',
-      ossa: 'os, ossis n. — bone',
-      urnam: 'urna, -ae f. — urn',
-      auream: 'aureus, -a, -um — golden',
-      columna: 'columna, -ae f. — column',
-      altitudo: 'altitudo, altitudinis f. — height',
-      pedes: 'pes, pedis m. — foot (here, the measure)',
-      adclametur: 'acclamo, acclamare — to hail, acclaim (subjunctive in a result clause)',
-      felicior: 'felix, felicis — lucky, fortunate (comparative)',
-      melior: 'bonus, melior, optimus — good, better, best',
+      relatus: 'refero, referre, rettuli, relatus: to enrol, place among',
+      sepultus: 'sepelio, sepelire, sepelivi, sepultus: to bury',
+      ossa: 'os, ossis n.: bone',
+      urnam: 'urna, -ae f.: urn',
+      auream: 'aureus, -a, -um: golden',
+      columna: 'columna, -ae f.: column',
+      altitudo: 'altitudo, altitudinis f.: height',
+      pedes: 'pes, pedis m.: foot, here the measurement',
+      adclametur: 'acclamo, acclamare: to hail, cheer (subjunctive in a result clause)',
+      felicior: 'felix, felicis: lucky (comparative, “luckier”)',
+      melior: 'bonus, melior, optimus: good, better, best',
     },
   },
   {
     id: 'ammianus-16-10',
-    title: 'An emperor struck dumb',
-    source: 'Ammianus Marcellinus 16.10.15 (on Constantius II in Rome, AD 357)',
+    title: 'An emperor lost for words',
+    source: 'Ammianus Marcellinus 16.10.15, on Constantius II visiting Rome in AD 357',
     latin: [
       'Verum cum ad Traiani forum venisset, singularem sub omni caelo structuram, ut opinamur, etiam numinum adsensione mirabilem, haerebat adtonitus per giganteos contextus circumferens mentem nec relatu effabiles nec rursus mortalibus adpetendos.',
     ],
     english: [
-      'But when he came to the Forum of Trajan, a structure unique under the whole sky, as we believe, and a marvel even in the opinion of the gods, he stood fixed in amazement, turning his mind over the gigantic complex, which can neither be described in words nor ever again be attempted by mortals.',
+      'But when he came to the Forum of Trajan, which I think is unlike anything else under the sky and amazing even to the gods, he stopped in his tracks. He just stood there, stunned, trying to take in buildings so gigantic that words can’t describe them and no human being could ever try to build them again.',
     ],
     vocab: {
-      singularem: 'singularis, -e — unique, one of a kind',
-      structuram: 'structura, -ae f. — building, structure',
-      opinamur: 'opinor, opinari — to think, believe',
-      numinum: 'numen, numinis n. — divine power, god',
-      mirabilem: 'mirabilis, -e — wonderful',
-      haerebat: 'haereo, haerere — to stick, stand fixed',
-      adtonitus: 'attonitus, -a, -um — thunderstruck, astonished',
-      giganteos: 'giganteus, -a, -um — gigantic, of the Giants',
-      effabiles: 'effabilis, -e — able to be described',
+      singularem: 'singularis, -e: unique, one of a kind',
+      structuram: 'structura, -ae f.: building, structure',
+      opinamur: 'opinor, opinari: to think, believe',
+      numinum: 'numen, numinis n.: divine power, god',
+      mirabilem: 'mirabilis, -e: wonderful',
+      haerebat: 'haereo, haerere: to stick, be stuck',
+      adtonitus: 'attonitus, -a, -um: thunderstruck, amazed',
+      giganteos: 'giganteus, -a, -um: gigantic, fit for Giants',
+      effabiles: 'effabilis, -e: able to be put into words',
     },
   },
   {
     id: 'pliny-10-97',
-    title: 'Trajan answers Pliny',
-    source: 'Pliny the Younger, Letters 10.97 (c. AD 112)',
+    title: 'Trajan writes back to Pliny',
+    source: 'Pliny the Younger, Letters 10.97 (around AD 112)',
     latin: [
       'Actum quem debuisti, mi Secunde, in excutiendis causis eorum, qui Christiani ad te delati fuerant, secutus es. Neque enim in universum aliquid, quod quasi certam formam habeat, constitui potest.',
       'Conquirendi non sunt; si deferantur et arguantur, puniendi sunt, ita tamen ut, qui negaverit se Christianum esse idque re ipsa manifestum fecerit, id est supplicando dis nostris, quamvis suspectus in praeteritum, veniam ex paenitentia impetret.',
       'Sine auctore vero propositi libelli in nullo crimine locum habere debent. Nam et pessimi exempli nec nostri saeculi est.',
     ],
     english: [
-      'You have followed the right course, my Secundus, in examining the cases of those who were reported to you as Christians. No general rule with anything like a fixed form can be laid down.',
-      'They are not to be hunted out; if they are reported and proved guilty, they must be punished, but anyone who denies being a Christian and proves it in fact, that is, by praying to our gods, is to be pardoned for his change of heart, however suspect his past.',
-      'Anonymous accusations, though, must have no place in any charge. They set the worst precedent and are not in keeping with our age.',
+      'You did the right thing, my dear Secundus, in looking into the cases of people reported to you as Christians. There isn’t one rule that can be set down for every case.',
+      'Don’t go hunting for them. If they’re reported and found guilty, they have to be punished. But if someone says he isn’t a Christian and proves it by actually praying to our gods, then he should be let off because he changed his mind, however suspicious his past.',
+      'Anonymous accusations shouldn’t count in any case at all. They set a terrible example and don’t belong in our times.',
     ],
     vocab: {
-      debuisti: 'debeo, debere — to owe; ought',
-      excutiendis: 'excutio, excutere — to examine closely (gerundive)',
-      delati: 'defero, deferre, detuli, delatus — to report, inform against',
-      conquirendi: 'conquiro, conquirere — to hunt out (gerundive: “must be”)',
-      puniendi: 'punio, punire — to punish (gerundive)',
-      supplicando: 'supplico, supplicare — to pray to (gerund, “by praying”)',
-      veniam: 'venia, -ae f. — pardon',
-      libelli: 'libellus, -i m. — pamphlet, written accusation',
-      saeculi: 'saeculum, -i n. — age, generation',
+      debuisti: 'debeo, debere: to owe; ought',
+      excutiendis: 'excutio, excutere: to examine closely (gerundive)',
+      delati: 'defero, deferre, detuli, delatus: to report, inform against',
+      conquirendi: 'conquiro, conquirere: to hunt out (gerundive, “are to be”)',
+      puniendi: 'punio, punire: to punish (gerundive)',
+      supplicando: 'supplico, supplicare: to pray to (gerund, “by praying”)',
+      veniam: 'venia, -ae f.: pardon',
+      libelli: 'libellus, -i m.: pamphlet, written accusation',
+      saeculi: 'saeculum, -i n.: age, generation',
     },
   },
 ];
 
-/** Cassius Dio (written in Greek, c. AD 230), quoted in English. */
+/** Cassius Dio (he wrote in Greek, around AD 230), quoted in English. */
 export const dio = [
   {
     ref: 'Roman History 68.16.3',

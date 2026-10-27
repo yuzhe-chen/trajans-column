@@ -273,15 +273,14 @@ p { margin: 0 0 1em; }
 .station__stage {
   position: sticky; top: var(--bar);
   height: calc(100svh - var(--bar));
-  padding-top: clamp(28px, 7vh, 72px);
-  display: grid; grid-template-rows: minmax(0, 1fr) auto;
+  display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
   overflow: hidden;
   background: #000;
 }
 /* The stone fills the top of the screen, breathing slowly. Its edges fade to
    black so it reads as lit in a dark room. */
 .station__art {
-  position: relative; justify-self: center; align-self: center;
+  position: relative; justify-self: center; align-self: start;
   aspect-ratio: var(--ratio, 2.286);
   height: min(100%, calc((100vw - 2 * var(--gutter)) / var(--ratio, 2.286)));
   max-width: calc(100vw - 2 * var(--gutter));
@@ -313,8 +312,9 @@ p { margin: 0 0 1em; }
 }
 
 .station__panel { padding: 14px var(--gutter) 18px; background: #000; position: relative; z-index: 2; }
-.station__head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 10px; }
-.station__head h2 { font-size: 26px; margin: 0; order: -1; }
+/* The heading sits above the stone, so the stone always has room overhead. */
+.station__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 18px; padding: clamp(36px, 7vh, 70px) var(--gutter) clamp(18px, 3vh, 28px); }
+.station__head h2 { font-size: clamp(28px, 2.6vw, 38px); margin: 0; }
 .station__head .eyebrow { margin: 0; color: var(--muted); font-weight: 500; }
 .station__lines { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0 20px; }
 .station__lines li {
@@ -505,7 +505,10 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .empire__lead { max-width: 46ch; }
 .map { display: grid; grid-template-columns: minmax(0, 1fr) 300px; border: 1px solid var(--rule); }
 .map__frame { position: relative; background: #070a0e; overflow: hidden; }
-.map__svg { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; cursor: grab; touch-action: none; }
+.map__svg { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; cursor: grab; touch-action: pan-y; }
+.map__frame.is-active .map__svg { touch-action: none; }
+.map__frame::after { content: ''; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 2px transparent; transition: box-shadow .2s; }
+.map__frame.is-active::after { box-shadow: inset 0 0 0 2px var(--accent); }
 .map__svg:active { cursor: grabbing; }
 
 .map__zoom { position: absolute; left: 16px; top: 16px; display: grid; background: #000; border: 1px solid var(--rule); }
