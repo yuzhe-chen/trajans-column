@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Leave out what the site doesn't serve
-        run: rm -rf .git .github scripts README.md
+        run: rm -rf .git .github scripts README.md firebase.json .firebaserc
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

@@ -27,3 +27,13 @@ Pushing to `main` publishes it with GitHub Pages.
 into rows) round a cylinder as a true helix in a shader, so the 3D column is
 built from the frieze itself. Scrolling reads the strip in order; the column
 turns so the part being read faces you, and the climb pauses at key scenes.
+
+## Hosting
+
+Two copies of the same files:
+
+- GitHub Pages, https://yuzhe-chen.github.io/trajans-column/, published by
+  `.github/workflows/pages.yml` on every push to `main`.
+- Firebase Hosting, https://trajans-column.web.app, a site in the
+  `saxonplanner` project. Deploy with
+  `npx firebase-tools deploy --only hosting:trajans-column`.
