@@ -26,32 +26,16 @@
 
   <header class="masthead">
     <div class="masthead__bar">
-      <a class="wordmark" href="#top" aria-label="Trajan's Column, home">
-        <span class="wordmark__small">Trajan’s</span>
-        <span class="wordmark__big">Column</span>
-      </a>
-
-      <ul class="utility" aria-label="Quick links">
-        <li><a href="#sources"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.2c2-.9 4-.9 6 .3 2-1.2 4-1.2 6-.3v10c-2-.9-4-.9-6 .3-2-1.2-4-1.2-6-.3z M8 3.5v10"/></svg>Read the Latin</a></li>
-        <li><a href="#empire"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.5s-4.5-4.6-4.5-8a4.5 4.5 0 0 1 9 0c0 3.4-4.5 8-4.5 8z"/><circle cx="8" cy="6.5" r="1.6"/></svg>Map</a></li>
-        <li><a href="#credits">Credits</a></li>
-      </ul>
+      <a class="wordmark" href="#top" aria-label="Trajan's Column, home">Trajan’s Column</a>
 
       <nav class="mainnav" aria-label="Main">
         <ul class="mainnav__list">
-          <li>
-            <button type="button" class="mainnav__item" aria-expanded="false" aria-controls="menu-column">The column <span class="chev" aria-hidden="true"></span></button>
-          </li>
+          <li><button type="button" class="mainnav__item" aria-expanded="false" aria-controls="menu-column">Column <span class="chev" aria-hidden="true"></span></button></li>
           <li><a class="mainnav__item" href="#coins">Coins</a></li>
-          <li>
-            <button type="button" class="mainnav__item" aria-expanded="false" aria-controls="menu-emperor">The emperor <span class="chev" aria-hidden="true"></span></button>
-          </li>
-          <li>
-            <button type="button" class="mainnav__item" aria-expanded="false" aria-controls="menu-empire">The empire <span class="chev" aria-hidden="true"></span></button>
-          </li>
-          <li>
-            <button type="button" class="mainnav__item" aria-expanded="false" aria-controls="menu-sources">Sources <span class="chev" aria-hidden="true"></span></button>
-          </li>
+          <li><button type="button" class="mainnav__item" aria-expanded="false" aria-controls="menu-emperor">Emperor <span class="chev" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="mainnav__item" aria-expanded="false" aria-controls="menu-empire">Empire <span class="chev" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="mainnav__item" aria-expanded="false" aria-controls="menu-sources">Sources <span class="chev" aria-hidden="true"></span></button></li>
+          <li><a class="mainnav__item" href="#credits">Credits</a></li>
         </ul>
         <button type="button" class="menubutton" aria-expanded="false" aria-controls="menu-all">Menu <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
       </nav>
@@ -59,47 +43,52 @@
 
     <div class="megamenu" id="menu-column" hidden>
       <ul>
-        <li><a href="#overview">About the column</a></li>
-        <li><a href="#ascent">Climb the frieze</a></li>
-        <li><a href="#inscription">The inscription</a></li>
+        <li><a href="#overview">About the Column</a></li>
+        <li><a href="#ascent">Climb the Frieze</a></li>
+        <li><a href="#inscription">Read the Inscription</a></li>
         <li><a href="#coins">Coins of Trajan</a></li>
       </ul>
     </div>
     <div class="megamenu" id="menu-emperor" hidden>
       <ul>
-        <li><a href="#emperor">Trajan’s life</a></li>
-        <li><a href="#namebuilder">His name, year by year</a></li>
-        <li><a href="#bridge">The bridge over the Danube</a></li>
+        <li><a href="#emperor">Trajan’s Life</a></li>
+        <li><a href="#namebuilder">His Name, Year by Year</a></li>
+        <li><a href="#bridge">Bridge over the Danube</a></li>
       </ul>
     </div>
     <div class="megamenu" id="menu-empire" hidden>
       <ul>
-        <li><a href="#empire">The empire in 98 and 117</a></li>
-        <li><a href="#empire" data-open-view="rome">The city of Rome</a></li>
-        <li><a href="#empire">The reign, year by year</a></li>
+        <li><a href="#empire">Empire in AD 98 and 117</a></li>
+        <li><a href="#empire" data-open-view="rome">City of Rome</a></li>
+        <li><a href="#empire">Reign, Year by Year</a></li>
       </ul>
     </div>
     <div class="megamenu" id="menu-sources" hidden>
       <ul>
-        <li><a href="#sources">Latin texts</a></li>
+        <li><a href="#sources">Latin Texts</a></li>
         <li><a href="#dio">Cassius Dio</a></li>
-        <li><a href="#drill">Read the abbreviations</a></li>
-        <li><a href="#credits">Images and data</a></li>
+        <li><a href="#drill">Read the Abbreviations</a></li>
+        <li><a href="#credits">Images and Data</a></li>
       </ul>
     </div>
     <div class="megamenu megamenu--all" id="menu-all" hidden>
+      <button type="button" class="megamenu__close" aria-label="Close menu"><span class="burger is-x" aria-hidden="true"><i></i><i></i><i></i></span></button>
       <ul>
-        <li><a href="#overview">About the column</a></li>
-        <li><a href="#ascent">Climb the frieze</a></li>
-        <li><a href="#inscription">The inscription</a></li>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#overview">About the Column</a></li>
+        <li><a href="#ascent">Climb the Frieze</a></li>
+        <li><a href="#inscription">Inscription</a></li>
         <li><a href="#coins">Coins</a></li>
-        <li><a href="#emperor">The emperor</a></li>
-        <li><a href="#bridge">The bridge</a></li>
-        <li><a href="#empire">The empire</a></li>
+        <li><a href="#emperor">Emperor</a></li>
+        <li><a href="#bridge">Bridge</a></li>
+        <li><a href="#empire">Empire</a></li>
         <li><a href="#sources">Sources</a></li>
+        <li><a href="#credits">Credits</a></li>
       </ul>
     </div>
   </header>
+  <button type="button" class="fabmenu" aria-label="Open the menu" aria-controls="menu-all" aria-expanded="false"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <button type="button" class="tourstop" hidden aria-label="Stop the tour"><span aria-hidden="true">❚❚</span> Stop</button>
   <div class="menuscrim" hidden></div>
 
   <main id="top">
@@ -111,23 +100,12 @@
         <h1 id="hero-title" data-content="site.title"></h1>
         <p class="hero__latin" lang="la" data-content="site.latin"></p>
         <p class="hero__intro" data-content="site.intro"></p>
+        <button type="button" class="button tour"><span class="play" aria-hidden="true"></span>Play the tour</button>
       </div>
     </section>
 
     <!-- ───────────── overview ───────────── -->
     <section class="wrap overview" id="overview" aria-label="Overview">
-      <nav class="onpage" aria-label="On this page">
-        <h2>On this page</h2>
-        <ul>
-          <li><a href="#ascent">The frieze</a></li>
-          <li><a href="#inscription">The inscription</a></li>
-          <li><a href="#coins">The coins</a></li>
-          <li><a href="#emperor">The emperor</a></li>
-          <li><a href="#bridge">The bridge</a></li>
-          <li><a href="#empire">The empire</a></li>
-          <li><a href="#sources">Sources</a></li>
-        </ul>
-      </nav>
       <div class="overview__grid">
         <div class="overview__text">
           <p class="lead" data-content="overview.lead"></p>
@@ -155,7 +133,6 @@
           </dl>
         </aside>
         <div class="scenes" aria-live="polite"></div>
-        <p class="ascent__hint">Scroll to climb</p>
       </div>
     </section>
 
@@ -201,7 +178,7 @@
     <!-- ───────────── the emperor ───────────── -->
     <section class="emperor" id="emperor" aria-labelledby="emperor-title">
       <div class="emperor__photo">
-        <img src="assets/misc/bust.jpg" alt="Marble statue of the emperor Trajan in armour" loading="lazy">
+        <div class="emperor__sticky"><img src="assets/misc/bust.jpg" alt="Marble statue of the emperor Trajan in armour" loading="lazy"></div>
       </div>
       <div class="emperor__text">
         <p class="eyebrow" lang="la">Optimus Princeps</p>
@@ -211,7 +188,7 @@
 
         <div class="namebuilder card" id="namebuilder" aria-labelledby="nb-title">
           <h3 id="nb-title">His name, year by year</h3>
-          <p class="muted">An emperor’s official name grew with every victory and office. Drag through his reign.</p>
+          <p class="muted">An emperor’s official name grew with every victory and office.</p>
           <label class="namebuilder__year">
             <span>AD</span>
             <output class="namebuilder__ad">113</output>
@@ -246,7 +223,7 @@
       </div>
       <figure class="piers" aria-labelledby="piers-cap">
         <svg class="piers__svg" role="img" aria-label="Diagram of the bridge's twenty piers, to Dio's measurements"></svg>
-        <figcaption id="piers-cap" class="muted">Dio’s figures, drawn to scale in Roman feet. Hover a pier.</figcaption>
+        <figcaption id="piers-cap" class="muted">Dio’s figures, drawn to scale in Roman feet.</figcaption>
       </figure>
     </section>
 
@@ -259,7 +236,7 @@
           <button type="button" role="radio" aria-checked="false" data-view="rome">City of Rome</button>
         </div>
       </div>
-      <p class="lead empire__lead">Eutropius says Trajan spread the empire’s bounds <span class="la-word" data-gloss="longe lateque: far and wide" tabindex="0">longe lateque</span>. Follow his reign down the timeline, or open any of his building works.</p>
+      <p class="lead empire__lead">Eutropius says Trajan spread the empire’s bounds <span class="la-word" data-gloss="longe lateque: far and wide" tabindex="0">longe lateque</span>. His reign, year by year, and the works he built across it.</p>
 
       <div class="map">
         <div class="map__frame">
@@ -277,7 +254,6 @@
             <span><i class="key key--pin"></i>Building work</span>
           </div>
           <div class="map__card" hidden></div>
-          <p class="map__hint">Scroll or pinch to zoom · drag to move</p>
         </div>
         <ol class="timeline" aria-label="Trajan's reign"></ol>
       </div>
@@ -288,7 +264,7 @@
       <div class="sectionhead">
         <h2 id="sources-title">In their own words</h2>
       </div>
-      <p class="lead">What the Romans wrote about Trajan and his column. Hover a dotted word for its dictionary entry.</p>
+      <p class="lead">What the Romans wrote about Trajan and his column.</p>
       <div class="reading"></div>
 
       <div class="sectionhead sectionhead--sub"><h3>Cassius Dio</h3></div>
@@ -297,7 +273,7 @@
 
       <div class="sectionhead sectionhead--sub"><h3>Read the abbreviations</h3></div>
       <article class="card drill" id="drill">
-        <p class="muted">Romans carved as few letters as they could. What does it stand for?</p>
+        <p class="muted">Romans carved as few letters as they could.</p>
         <p class="drill__abbr" lang="la"></p>
         <div class="drill__choices"></div>
         <p class="drill__result" aria-live="polite"></p>

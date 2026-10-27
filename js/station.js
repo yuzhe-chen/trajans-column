@@ -73,17 +73,33 @@ export function mountStation(section, { inscription, boxes }) {
   }
 
   // ── the glass ──
-  function placeLens(x, y, { glide = false } = {}) {
+  function placeLens(x, y) {
     const r = art.getBoundingClientRect();
     const size = lens.offsetWidth;
     const zoom = parseFloat(getComputedStyle(lens).getPropertyValue('--zoom')) || 2.6;
-    lens.classList.toggle('is-gliding', glide);
     lens.style.transform = `translate(${x - size / 2}px, ${y - size / 2}px)`;
     lensImage.style.backgroundImage = `url("${img.currentSrc || img.src}")`;
     lensImage.style.backgroundSize = `${r.width * zoom}px ${r.height * zoom}px`;
     lensImage.style.backgroundPosition = `${size / 2 - x * zoom - 6}px ${size / 2 - y * zoom - 6}px`;
   }
   const lineAt = (fx, fy) => boxes.findIndex((b) => fx >= b.x0 - 0.01 && fx <= b.x1 + 0.01 && fy >= b.y0 - 0.02 && fy <= b.y1 + 0.02);
+
+  // The glass eases toward where it should be, one frame at a time, so it
+  // glides smoothly however the scroll events arrive.
+  const target = { x: 0, y: 0 }, at = { x: 0, y: 0 };
+  let easing = false, primed = false;
+  function aim(x, y, immediate = false) {
+    target.x = x; target.y = y;
+    if (immediate || !primed) { at.x = x; at.y = y; primed = true; placeLens(x, y); return; }
+    if (!easing) { easing = true; requestAnimationFrame(step); }
+  }
+  function step() {
+    at.x += (target.x - at.x) * 0.2;
+    at.y += (target.y - at.y) * 0.2;
+    placeLens(at.x, at.y);
+    if (Math.abs(target.x - at.x) + Math.abs(target.y - at.y) > 0.3) requestAnimationFrame(step);
+    else { at.x = target.x; at.y = target.y; placeLens(at.x, at.y); easing = false; }
+  }
 
   // ── scroll drives the reading ──
   let pointer = false;
@@ -105,9 +121,11 @@ export function mountStation(section, { inscription, boxes }) {
     const r = art.getBoundingClientRect();
     const fx = b.x0 + 0.06 + (b.x1 - b.x0 - 0.12) * t;
     const fy = (b.y0 + b.y1) / 2;
-    placeLens(fx * r.width, fy * r.height, { glide: true });
+    aim(fx * r.width, fy * r.height);
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
+  // Scrolling always takes the glass back from the mouse: with the stone
+  // filling the screen the pointer is nearly always over it.
+  window.addEventListener('scroll', () => { pointer = false; onScroll(); }, { passive: true });
 
   function scrollToLine(i) {
     if (narrow()) { setActive(i); return; }
@@ -124,7 +142,7 @@ export function mountStation(section, { inscription, boxes }) {
     pointer = true;
     const r = art.getBoundingClientRect();
     const x = event.clientX - r.left, y = event.clientY - r.top;
-    placeLens(x, y);
+    aim(x, y, true);
     const i = lineAt(x / r.width, y / r.height);
     if (i >= 0) setActive(i);
   });
@@ -147,7 +165,7 @@ export function mountStation(section, { inscription, boxes }) {
   function move(event) {
     const r = art.getBoundingClientRect();
     const x = event.clientX - r.left, y = event.clientY - r.top - lens.offsetWidth * 0.7;
-    placeLens(x, y);
+    aim(x, y, true);
     const i = lineAt(x / r.width, y / r.height);
     if (i >= 0) setActive(i);
   }

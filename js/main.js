@@ -4,7 +4,7 @@
  */
 
 import * as content from './content.js';
-import { el, clear, getJson } from './dom.js';
+import { el, clear, getJson, glideTo } from './dom.js';
 import { toRoman } from './roman.js';
 import { mountDrill, mountNameBuilder, mountReadings, mountGlosses, mountDio } from './latin.js';
 
@@ -28,14 +28,24 @@ for (const node of document.querySelectorAll('[data-facts]')) {
 
 // ── the climb ──
 const scenesBox = document.querySelector('.scenes');
-const sceneCards = content.keyScenes.map((s) => el('article', { class: 'scene', 'aria-hidden': 'true' },
+const sceneCards = content.keyScenes.map((s, i) => el('article', { class: 'scene', 'aria-hidden': 'true' },
   el('div', { class: 'scene__img' }, el('img', { src: s.image, alt: s.title, loading: 'lazy' })),
   el('div', { class: 'scene__text' },
     el('p', { class: 'scene__num' }, `Scene ${toRoman(s.scene)}`),
     el('h2', { class: 'scene__title' }, s.title),
     el('p', { class: 'scene__latin', lang: 'la' }, s.latin),
-    el('p', { class: 'scene__body' }, s.text))));
+    el('p', { class: 'scene__body' }, s.text),
+    el('button', { type: 'button', class: 'button scene__next' },
+      i < content.keyScenes.length - 1 ? 'Next scene' : 'On to the inscription',
+      el('span', { class: 'button__arrow', 'aria-hidden': 'true' })))));
 scenesBox.append(...sceneCards);
+let goToScene = null;
+sceneCards.forEach((card, i) => {
+  card.querySelector('.scene__next').addEventListener('click', () => {
+    if (i < sceneCards.length - 1 && goToScene) goToScene(i + 1);
+    else glideTo(document.querySelector('#inscription').getBoundingClientRect().top + window.scrollY);
+  });
+});
 
 const stage = document.querySelector('.ascent__stage');
 const gauge = {
@@ -43,7 +53,6 @@ const gauge = {
   feet: stage.querySelector('.gauge__feet'),
   turn: stage.querySelector('.gauge__turn'),
   scene: stage.querySelector('.gauge__scene'),
-  hint: stage.querySelector('.ascent__hint'),
 };
 let last = {};
 function onScene(update) {
@@ -60,7 +69,6 @@ function onScene(update) {
     if (g.feet !== last.feet) gauge.feet.textContent = toRoman(g.feet) || '0';
     if (g.turn !== last.turn) gauge.turn.textContent = toRoman(g.turn);
     if (g.scene !== last.scene) gauge.scene.textContent = toRoman(g.scene);
-    gauge.hint.style.opacity = g.progress < 0.03 ? 1 : 0;
     last = g;
   }
 }
@@ -71,7 +79,10 @@ import('./column.js')
     canvas: stage.querySelector('.ascent__canvas'),
     keyScenes: content.keyScenes,
     onScene,
-    onReady: () => { stage.querySelector('.ascent__loading').hidden = true; },
+    onReady: ({ goTo }) => {
+      stage.querySelector('.ascent__loading').hidden = true;
+      goToScene = goTo;
+    },
   }))
   .catch((error) => {
     console.error(error);
@@ -126,13 +137,16 @@ mountGlosses(document.querySelector('.gloss'));
 
 // ── the menu ──
 const scrim = document.querySelector('.menuscrim');
-const toggles = [...document.querySelectorAll('.mainnav__item[aria-controls], .menubutton')];
+const allMenu = document.getElementById('menu-all');
+const fab = document.querySelector('.fabmenu');
+const toggles = [...document.querySelectorAll('.mainnav__item[aria-controls], .menubutton, .fabmenu')];
 function closeMenus(except = null) {
   for (const t of toggles) {
     if (t === except) continue;
     t.setAttribute('aria-expanded', 'false');
     document.getElementById(t.getAttribute('aria-controls')).hidden = true;
   }
+  if (!except) allMenu.classList.remove('is-floating');
   scrim.hidden = !except;
 }
 for (const t of toggles) {
@@ -140,9 +154,11 @@ for (const t of toggles) {
     const open = t.getAttribute('aria-expanded') !== 'true';
     closeMenus(open ? t : null);
     t.setAttribute('aria-expanded', String(open));
+    allMenu.classList.toggle('is-floating', open && t === fab);
     document.getElementById(t.getAttribute('aria-controls')).hidden = !open;
   });
 }
+allMenu.querySelector('.megamenu__close').addEventListener('click', () => closeMenus());
 scrim.addEventListener('click', () => closeMenus());
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenus(); });
 for (const link of document.querySelectorAll('.megamenu a')) {
@@ -157,6 +173,53 @@ for (const link of document.querySelectorAll('.megamenu a')) {
       press();
     }
   });
+}
+
+// The header scrolls away; scrolling back up brings out a menu button.
+const masthead = document.querySelector('.masthead');
+let lastY = window.scrollY;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  const up = y < lastY - 2, down = y > lastY + 2;
+  if (y < masthead.offsetHeight || down) fab.classList.remove('is-shown');
+  else if (up) fab.classList.add('is-shown');
+  if (y < masthead.offsetHeight && fab.getAttribute('aria-expanded') === 'true') closeMenus();
+  lastY = y;
+}, { passive: true });
+
+// ── the tour: scroll the whole site by itself ──
+const tourButton = document.querySelector('.tour');
+const tourStop = document.querySelector('.tourstop');
+let touring = false, lastT = 0, carry = 0;
+function tourStep(t) {
+  if (!touring) return;
+  const dt = lastT ? Math.min(0.05, (t - lastT) / 1000) : 0;
+  lastT = t;
+  carry += dt * 130;                         // pixels a second
+  const whole = Math.floor(carry);
+  if (whole) {
+    carry -= whole;
+    window.scrollBy({ top: whole, behavior: 'instant' });
+  }
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) stopTour();
+  else requestAnimationFrame(tourStep);
+}
+function startTour() {
+  touring = true; lastT = 0; carry = 0;
+  tourStop.hidden = false;
+  document.documentElement.style.scrollBehavior = 'auto';
+  requestAnimationFrame(tourStep);
+}
+function stopTour() {
+  touring = false;
+  tourStop.hidden = true;
+  document.documentElement.style.scrollBehavior = '';
+}
+tourButton.addEventListener('click', startTour);
+tourStop.addEventListener('click', stopTour);
+// Any move of the reader's own ends the tour.
+for (const type of ['wheel', 'touchstart', 'keydown']) {
+  window.addEventListener(type, () => { if (touring) stopTour(); }, { passive: true });
 }
 
 // ── credits ──

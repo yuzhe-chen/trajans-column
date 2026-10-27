@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#000"/><g fill="none" stroke="#c8a165" stroke-width="2"><rect x="10" y="26" width="12" height="3"/><path d="M12 25V7M20 25V7"/><path d="M12 9l8 3M12 14l8 3M12 19l8 3"/><rect x="10" y="4" width="12" height="2.5"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#000"/>
+  <!-- statue -->
+  <path d="M32 4.5a2.2 2.2 0 1 1 0 4.4a2.2 2.2 0 1 1 0-4.4zM29.6 9.5h4.8l.8 5.5h-6.4z" fill="#c8a165"/>
+  <!-- capital and abacus -->
+  <rect x="23" y="15.5" width="18" height="3" fill="#c8a165"/>
+  <path d="M25.5 18.5h13l-2 3h-9z" fill="#c8a165"/>
+  <!-- shaft with the spiral band -->
+  <clipPath id="s"><rect x="27" y="21.5" width="10" height="26"/></clipPath>
+  <rect x="27" y="21.5" width="10" height="26" fill="#e9dcc2"/>
+  <g clip-path="url(#s)" stroke="#8a6a3a" stroke-width="1.6">
+    <path d="M24 26l16-4M24 31l16-4M24 36l16-4M24 41l16-4M24 46l16-4M24 51l16-4"/>
+  </g>
+  <!-- wreath, pedestal -->
+  <rect x="25" y="47.5" width="14" height="2.5" rx="1.2" fill="#c8a165"/>
+  <rect x="21" y="50" width="22" height="9" fill="#c8a165"/>
+  <rect x="25.5" y="52" width="13" height="3.2" fill="#000" opacity=".55"/>
+</svg>

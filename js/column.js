@@ -15,6 +15,7 @@
 
 import * as THREE from 'three';
 import { toRoman, parseRomanRange } from './roman.js';
+import { glideTo } from './dom.js';
 
 const TURNS = 23;          // the band winds 23 times
 const SCENES = 155;        // Cichorius' numbering
@@ -227,7 +228,7 @@ function sceneLocator(meta) {
  * the strip is read at an even pace except at key scenes, where it holds.
  */
 function buildTimeline(keyX, perTurn, length) {
-  const INTRO = 0.05, OUTRO = 0.06, HOLD = 0.05;
+  const INTRO = 0.09, OUTRO = 0.1, HOLD = 0.045;
   const start = INTRO, end = 1 - OUTRO;
   const holds = keyX.length * HOLD;
   const moving = end - start - holds;
@@ -323,27 +324,9 @@ export async function mountColumn({ stage, canvas, keyScenes, onScene, onReady }
   shaft.geometry.translate(0, shaftH / 2, 0);
   column.add(shaft);
 
-  // Pedestal, torus, capital: plain stone.
-  const stone = new THREE.MeshStandardMaterial({ color: 0x9f988b, roughness: 0.9, metalness: 0 });
-  const D = radius * 2;
-  const pedH = D * 1.45, pedW = D * 1.55;
-  const pedestal = new THREE.Mesh(new THREE.BoxGeometry(pedW, pedH, pedW), stone);
-  pedestal.position.y = -pedH / 2 - band * 0.6;
-  const plinth = new THREE.Mesh(new THREE.BoxGeometry(pedW * 1.08, band * 0.5, pedW * 1.08), stone);
-  plinth.position.y = -band * 0.6 - band * 0.25 + 0.001;
-  const torus = new THREE.Mesh(new THREE.TorusGeometry(radius * 1.04, band * 0.32, 24, 128), stone);
-  torus.rotation.x = Math.PI / 2;
-  torus.position.y = -band * 0.12;
-  const echinus = new THREE.Mesh(new THREE.CylinderGeometry(radius * 1.22, radius * 1.0, band * 0.9, 128), stone);
-  echinus.position.y = shaftH + band * 0.45;
-  const abacus = new THREE.Mesh(new THREE.BoxGeometry(radius * 2.7, band * 0.7, radius * 2.7), stone);
-  abacus.position.y = shaftH + band * 1.25;
-  const drum = new THREE.Mesh(new THREE.CylinderGeometry(radius * 0.75, radius * 0.85, band * 2.2, 96), stone);
-  drum.position.y = shaftH + band * 2.7;
-  // A plain figure-shaped stand-in for the statue on top (Trajan's, now St Peter's).
-  const statue = new THREE.Mesh(new THREE.CapsuleGeometry(radius * 0.32, band * 2.6, 8, 24), stone);
-  statue.position.y = shaftH + band * 5.4;
-  column.add(pedestal, plinth, torus, echinus, abacus, drum, statue);
+  // Pedestal, wreath, capital, railing and statue: see ornament.js.
+  const { buildOrnament } = await import('./ornament.js');
+  column.add(await buildOrnament({ radius, band, shaftH }));
 
   scene.add(new THREE.AmbientLight(0xffffff, 0.35));
   const key = new THREE.DirectionalLight(0xfff1dc, 2.2);
@@ -399,24 +382,39 @@ export async function mountColumn({ stage, canvas, keyScenes, onScene, onReady }
     // Turn the column so the point being read faces the camera.
     column.rotation.y = 2 * Math.PI * (0.75 - q);
 
-    // Close reading framing vs. the whole column.
+    // Where the camera looks. Most of the climb follows the band; at the two
+    // ends it stops to look at the pedestal and at the capital and statue,
+    // and pulls right back to show the whole column.
     const halfFov = THREE.MathUtils.degToRad(camera.fov / 2);
-    const closeDist = (band * 7) / (2 * Math.tan(halfFov)) + radius;
-    const fullDist = ((shaftH + band * 9) * 1.08) / (2 * Math.tan(halfFov)) + radius;
-    let pull = 0, focusY = readY;
-    if (p < timeline.INTRO) {
-      pull = 1 - smooth(p / timeline.INTRO);
-      focusY = THREE.MathUtils.lerp(readY, shaftH * 0.42, pull);
-    } else if (p > 1 - timeline.OUTRO) {
-      pull = smooth((p - (1 - timeline.OUTRO)) / timeline.OUTRO);
-      focusY = THREE.MathUtils.lerp(readY, shaftH * 0.55, pull);
+    const fit = (h) => h / (2 * Math.tan(halfFov));
+    const D = radius * 2;
+    const views = {
+      read: { y: readY, dist: fit(band * 7) + radius, lift: -band * 0.8 },
+      full: { y: shaftH * 0.5, dist: fit(shaftH + band * 15) * 1.06 + radius, lift: 0 },
+      base: { y: -band * 1.2 - D * 0.55, dist: fit(D * 1.25 + band * 4.5) + D, lift: band * 0.6 },
+      top: { y: shaftH + band * 3.2, dist: fit(band * 10) + D, lift: -band * 1.2 },
+    };
+    const I = timeline.INTRO, O = 1 - timeline.OUTRO;
+    // [progress, view] keyframes; between two, the camera eases.
+    const keys = [
+      [0, 'full'], [I * 0.38, 'base'], [I * 0.72, 'base'], [I, 'read'],
+      [O, 'read'], [O + (1 - O) * 0.3, 'top'], [O + (1 - O) * 0.6, 'top'], [1, 'full'],
+    ];
+    let view = views.read;
+    if (p < I || p > O) {
+      let k = 1;
+      while (k < keys.length - 1 && p > keys[k][0]) k += 1;
+      const [p0, v0] = keys[k - 1], [p1, v1] = keys[k];
+      const f = smooth((p - p0) / Math.max(1e-6, p1 - p0));
+      const A = views[v0], B = views[v1];
+      view = { y: A.y + (B.y - A.y) * f, dist: A.dist + (B.dist - A.dist) * f, lift: A.lift + (B.lift - A.lift) * f };
     }
-    const dist = THREE.MathUtils.lerp(closeDist, fullDist, pull);
+    const focusY = view.y, dist = view.dist;
 
     // On a wide screen the column sits left of centre.
     const viewW = 2 * dist * Math.tan(halfFov) * camera.aspect;
     const shift = wide ? viewW * 0.17 : 0;
-    camera.position.set(shift, focusY - band * 0.8 * (1 - pull), dist);
+    camera.position.set(shift, focusY + view.lift, dist);
     camera.lookAt(tmp.set(shift, focusY, 0));
     uniforms.uCam.value.copy(camera.position);
 
@@ -446,7 +444,15 @@ export async function mountColumn({ stage, canvas, keyScenes, onScene, onReady }
   resize();
   readScroll();
   requestAnimationFrame(frame);
-  onReady?.({ placeholder: Boolean(meta.placeholder) });
+  /** Scroll the page to the middle of key scene i's pause. */
+  function goTo(i) {
+    const section = stage.parentElement;
+    const total = section.offsetHeight - stage.clientHeight;
+    const [a, b] = timeline.windows[i];
+    const top = section.getBoundingClientRect().top + window.scrollY;
+    glideTo(top + ((a + b) / 2) * total);
+  }
+  onReady?.({ placeholder: Boolean(meta.placeholder), goTo });
 }
 
 function smooth(t) {

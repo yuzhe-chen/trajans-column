@@ -99,6 +99,7 @@ export async function mountMap(root) {
 
   const world = svg.append('g').attr('class', 'world');
   const romeLayer = svg.append('g').attr('display', 'none');
+  const romeInner = romeLayer.append('g');
 
   world.append('rect').attr('x', -W).attr('y', -H).attr('width', W * 3).attr('height', H * 3).attr('fill', 'url(#seaGrad)');
   world.append('path').attr('class', 'graticule').attr('d', path(d3.geoGraticule().step([10, 10])()));
@@ -188,6 +189,8 @@ export async function mountMap(root) {
 
   // ── zoom ──
   let k = 1;
+  let view = 'empire';
+  const saved = { empire: d3.zoomIdentity, rome: d3.zoomIdentity };
   const zoom = d3.zoom()
     .scaleExtent([1, 14])
     .translateExtent([[-W * 0.1, -H * 0.1], [W * 1.1, H * 1.1]])
@@ -198,6 +201,11 @@ export async function mountMap(root) {
     })
     .on('zoom', (event) => {
       k = event.transform.k;
+      if (view === 'rome') {
+        romeInner.attr('transform', event.transform);
+        rpins?.attr('transform', (d) => `translate(${rp([d.lon, d.lat])}) scale(${1 / k})`);
+        return;
+      }
       world.attr('transform', event.transform);
       pinInner.attr('transform', `scale(${1 / k})`);
       marker.attr('data-k', k);
@@ -238,7 +246,7 @@ export async function mountMap(root) {
   root.querySelector('[data-zoom="out"]').addEventListener('click', () => zoomBy(1 / 1.8));
   root.querySelector('[data-zoom="reset"]').addEventListener('click', () => {
     svg.transition().duration(800).call(zoom.transform, d3.zoomIdentity);
-    marker.attr('opacity', 0);
+    if (view === 'empire') marker.attr('opacity', 0);
   });
 
   // ── the year ──
@@ -276,26 +284,27 @@ export async function mountMap(root) {
   }
 
   // ── the city of Rome ──
+  let rpins = null, rp = null;
   if (rome?.monuments?.length) {
     const pts = { type: 'MultiPoint', coordinates: [...rome.monuments.map((m) => [m.lon, m.lat]), ...(rome.bounds || [])] };
-    const rp = d3.geoMercator().fitExtent([[140, 90], [W - 140, H - 90]], pts);
+    rp = d3.geoMercator().fitExtent([[140, 90], [W - 140, H - 90]], pts);
     const rpath = d3.geoPath(rp);
-    romeLayer.append('rect').attr('width', W).attr('height', H).attr('fill', '#14130f');
+    romeLayer.insert('rect', ':first-child').attr('width', W).attr('height', H).attr('fill', '#14130f');
     const wall = asGeo(rome.servianWall ?? rome.wall);
     if (wall) {
-      romeLayer.append('path').attr('d', rpath(wall)).attr('fill', '#1d1b17')
+      romeInner.append('path').attr('d', rpath(wall)).attr('fill', '#1d1b17').attr('vector-effect', 'non-scaling-stroke')
         .attr('stroke', '#6d6556').attr('stroke-width', 2).attr('stroke-dasharray', '7 5');
-      romeLayer.append('text').attr('class', 'label').attr('text-anchor', 'middle')
+      romeInner.append('text').attr('class', 'label').attr('text-anchor', 'middle')
         .attr('transform', `translate(${rpath.centroid(wall)[0]},${rpath.bounds(wall)[0][1] - 16})`)
         .text('MURUS SERVII TULLII');
     }
     const tiber = asGeo(rome.tiber);
     if (tiber) {
-      romeLayer.append('path').attr('d', rpath(tiber)).attr('fill', 'none')
+      romeInner.append('path').attr('d', rpath(tiber)).attr('fill', 'none').attr('class', 'tiber')
         .attr('stroke', '#24445a').attr('stroke-width', 18).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
     }
     const island = asGeo(rome.tiberIsland);
-    if (island) romeLayer.append('path').attr('d', rpath(island)).attr('fill', '#3a372f');
+    if (island) romeInner.append('path').attr('d', rpath(island)).attr('fill', '#3a372f');
 
     const placed = [];
     const offsets = new Map();
@@ -306,7 +315,7 @@ export async function mountMap(root) {
       placed.push({ x, y: ly });
       offsets.set(d, ly - y);
     }
-    const rpins = romeLayer.selectAll('g.pin').data(rome.monuments).join('g')
+    rpins = romeInner.selectAll('g.pin').data(rome.monuments).join('g')
       .attr('class', 'pin').attr('tabindex', 0).attr('role', 'button').attr('aria-label', (d) => d.name)
       .attr('transform', (d) => `translate(${rp([d.lon, d.lat])})`)
       .on('click', (event, d) => {
@@ -328,12 +337,18 @@ export async function mountMap(root) {
     back.append('text').attr('x', 20).attr('y', 28).style('font', '500 18px "Helvetica Neue", Arial, sans-serif').style('fill', '#000').text('← The empire');
   }
 
-  function setView(view) {
-    const isRome = view === 'rome' && rome?.monuments?.length;
+  function setView(next) {
+    const isRome = next === 'rome' && rome?.monuments?.length;
+    const nextView = isRome ? 'rome' : 'empire';
+    if (nextView !== view) {
+      // Each view keeps its own zoom.
+      saved[view] = d3.zoomTransform(svgNode);
+      view = nextView;
+      svg.call(zoom.transform, saved[view]);
+    }
     world.attr('display', isRome ? 'none' : null);
     scalebar.attr('display', isRome ? 'none' : null);
     romeLayer.attr('display', isRome ? null : 'none');
-    root.querySelector('.map__zoom').hidden = Boolean(isRome);
     svg.attr('aria-label', isRome ? 'Map of ancient Rome with Trajan’s monuments' : 'Map of the Roman Empire');
     for (const button of document.querySelectorAll('[data-view]')) {
       button.setAttribute('aria-checked', String(button.dataset.view === (isRome ? 'rome' : 'empire')));
