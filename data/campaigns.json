@@ -1,0 +1,84 @@
+[
+ {
+  "year": 98,
+  "title": "Trajan becomes emperor",
+  "place": "Colonia Agrippina (Cologne)",
+  "lon": 6.9528,
+  "lat": 50.9364,
+  "text": "Nerva, who had adopted Trajan in 97, died in January 98. Trajan was in Germany—at Cologne, according to the historian Eutropius—when the news reached him, and he stayed on the Rhine and Danube frontiers for more than a year before entering Rome in 99."
+ },
+ {
+  "year": "101–102",
+  "title": "First Dacian War",
+  "place": "Tapae, near the Iron Gates of Transylvania pass (approximate)",
+  "lon": 22.79,
+  "lat": 45.48,
+  "text": "Trajan crossed the Danube against King Decebalus of Dacia and won a hard-fought battle at Tapae in 101. After further fighting, Decebalus asked for peace in 102 and became a Roman client king.",
+  "approximate": true
+ },
+ {
+  "year": "105–106",
+  "title": "Second Dacian War",
+  "place": "Sarmizegetusa Regia",
+  "lon": 23.3093,
+  "lat": 45.6219,
+  "text": "When Decebalus broke the peace, Trajan returned in 105, crossing the Danube on Apollodorus' new bridge at Drobeta. The Dacian capital, Sarmizegetusa Regia, fell in 106; Decebalus killed himself rather than be captured, and Dacia became a Roman province."
+ },
+ {
+  "year": 106,
+  "title": "Arabia annexed",
+  "place": "Bostra",
+  "lon": 36.4806,
+  "lat": 32.5183,
+  "text": "After the death of the Nabataean king Rabbel II, the governor of Syria, Aulus Cornelius Palma, annexed his kingdom, apparently with little or no fighting. It became the province of Arabia, with its capital at Bostra; coins called it \"Arabia acquired\" (Arabia adquisita) rather than conquered."
+ },
+ {
+  "year": 113,
+  "title": "Trajan's Column dedicated",
+  "place": "Rome",
+  "lon": 12.4842,
+  "lat": 41.8958,
+  "text": "The Column, carved with the story of the Dacian Wars, was dedicated in May 113 in the new Forum of Trajan. That autumn Trajan left Rome for the East; he never returned."
+ },
+ {
+  "year": 114,
+  "title": "Armenia annexed",
+  "place": "Elegeia, Armenia (approximate)",
+  "lon": 41.12,
+  "lat": 39.95,
+  "text": "Rome and Parthia had agreed that Armenia's king should be a Parthian prince approved by Rome, but Parthia crowned Parthamasiris without asking. Trajan marched in; at Elegeia he refused to recognise Parthamasiris, who was killed soon afterwards, and Armenia was made a Roman province.",
+  "approximate": true
+ },
+ {
+  "year": 115,
+  "title": "Earthquake at Antioch",
+  "place": "Antioch",
+  "lon": 36.1817,
+  "lat": 36.2047,
+  "text": "While Trajan was wintering at Antioch after campaigning in northern Mesopotamia, a great earthquake devastated the city (usually dated to December 115). According to the historian Cassius Dio, Trajan escaped through a window with minor injuries, but many people died, including one of the consuls."
+ },
+ {
+  "year": 116,
+  "title": "Ctesiphon taken",
+  "place": "Ctesiphon",
+  "lon": 44.5806,
+  "lat": 33.0936,
+  "text": "Trajan advanced down the Euphrates and Tigris and captured the Parthian capital, Ctesiphon, in 116, the year in which he took the title Parthicus (\"conqueror of the Parthians\"). New provinces of Mesopotamia and Assyria were declared."
+ },
+ {
+  "year": 116,
+  "title": "Trajan reaches the Persian Gulf",
+  "place": "Charax Spasinou (Mesene)",
+  "lon": 47.578,
+  "lat": 30.8947,
+  "text": "Trajan sailed on to the head of the Persian Gulf, where the king of Characene submitted to him. Cassius Dio says that, watching a ship leave for India, he wished he were young enough to follow Alexander the Great—but revolts were already breaking out behind him."
+ },
+ {
+  "year": 117,
+  "title": "Death at Selinus",
+  "place": "Selinus, Cilicia (Gazipaşa, Turkey)",
+  "lon": 32.283,
+  "lat": 36.2583,
+  "text": "After failing to capture the desert city of Hatra and falling ill, Trajan set out for Rome, but he suffered a stroke and died at Selinus in Cilicia in early August 117. Hadrian, whom he was said to have adopted on his deathbed, succeeded him and soon gave up Armenia, Mesopotamia and Assyria."
+ }
+]

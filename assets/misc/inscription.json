@@ -1,0 +1,50 @@
+[
+ {
+  "line": 1,
+  "x0": 0.085,
+  "y0": 0.1,
+  "x1": 0.915,
+  "y1": 0.21,
+  "text": "SENATVS\u00b7POPVLVSQVE\u00b7ROMANVS"
+ },
+ {
+  "line": 2,
+  "x0": 0.045,
+  "y0": 0.24,
+  "x1": 0.958,
+  "y1": 0.36,
+  "text": "IMP\u00b7CAESARI\u00b7DIVI\u00b7NERVAE\u00b7F\u00b7NERVAE"
+ },
+ {
+  "line": 3,
+  "x0": 0.042,
+  "y0": 0.395,
+  "x1": 0.97,
+  "y1": 0.505,
+  "text": "TRAIANO\u00b7AVG\u00b7GERM\u00b7DACICO\u00b7PONTIF"
+ },
+ {
+  "line": 4,
+  "x0": 0.042,
+  "y0": 0.515,
+  "x1": 0.985,
+  "y1": 0.645,
+  "text": "MAXIMO\u00b7TRIB\u00b7POT\u00b7XVII\u00b7IMP\u00b7VI\u00b7COS\u00b7VI\u00b7P\u00b7P"
+ },
+ {
+  "line": 5,
+  "x0": 0.04,
+  "y0": 0.672,
+  "x1": 0.973,
+  "y1": 0.78,
+  "text": "AD\u00b7DECLARANDVM\u00b7QVANTAE\u00b7ALTITVDINIS"
+ },
+ {
+  "line": 6,
+  "x0": 0.04,
+  "y0": 0.81,
+  "x1": 0.97,
+  "y1": 0.912,
+  "text": "MONS\u00b7ET\u00b7LOCVS\u00b7TANT[IS\u00b7OPER]IBVS\u00b7SIT\u00b7EGESTVS"
+ }
+]

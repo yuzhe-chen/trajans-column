@@ -1,0 +1,889 @@
+{
+ "rows": 28,
+ "rowHeight": 256,
+ "width": 2048,
+ "totalLength": 55943,
+ "source": "Conrad Cichorius, Die Reliefs der Traianssäule (1896–1900), Tafeln IV–CXIII",
+ "plates": [
+  {
+   "plate": "IV",
+   "number": 4,
+   "scenes": "I",
+   "title": "The watch on the Danube (scene I)",
+   "x0": 0,
+   "x1": 1671
+  },
+  {
+   "plate": "V",
+   "number": 5,
+   "scenes": "I–II",
+   "title": "The watch on the Danube (scene I); river-traffic on the Danube frontier (scene II)",
+   "x0": 1671,
+   "x1": 2481
+  },
+  {
+   "plate": "VI",
+   "number": 6,
+   "scenes": "II–III",
+   "title": "River-traffic on the Danube frontier (scene II); Danube landscape (scene III)",
+   "x0": 2481,
+   "x1": 2922
+  },
+  {
+   "plate": "VII",
+   "number": 7,
+   "scenes": "IV–V",
+   "title": "River-crossing by Roman troops (scene IV); Roman troops on the march (scene V)",
+   "x0": 2922,
+   "x1": 3407
+  },
+  {
+   "plate": "VIII",
+   "number": 8,
+   "scenes": "V–VI",
+   "title": "Roman troops on the march (scene V); council of war (scene VI)",
+   "x0": 3407,
+   "x1": 3792
+  },
+  {
+   "plate": "IX",
+   "number": 9,
+   "scenes": "VI–VIII",
+   "title": "Council of war (scene VI); the cavalry moves off (scene VII); Suovetaurilia (scene VIII)",
+   "x0": 3792,
+   "x1": 4276
+  },
+  {
+   "plate": "X",
+   "number": 10,
+   "scenes": "VIII–IX",
+   "title": "Suovetaurilia (scene VIII); princeps and peasant (scene IX)",
+   "x0": 4276,
+   "x1": 4827
+  },
+  {
+   "plate": "XI",
+   "number": 11,
+   "scenes": "X–XI",
+   "title": "Adlocutio (scene X); building a fort (scene XI)",
+   "x0": 4827,
+   "x1": 5348
+  },
+  {
+   "plate": "XII",
+   "number": 12,
+   "scenes": "XI–XIII",
+   "title": "Building a fort (scene XI); Trajan surveys the fortifications (scene XII); a Roman camp (scene XIII)",
+   "x0": 5348,
+   "x1": 5918
+  },
+  {
+   "plate": "XIII",
+   "number": 13,
+   "scenes": "XIII–XV",
+   "title": "A Roman camp (scene XIII); Trajan visits a hill-top fort (scene XIV); wood-clearing (scene XV)",
+   "x0": 5918,
+   "x1": 6523
+  },
+  {
+   "plate": "XIV",
+   "number": 14,
+   "scenes": "XV–XVIII",
+   "title": "Wood-clearing (scene XV); building a fort (scene XVI); Roman fort by a stream (scene XVII); a Dacian prisoner is brought in (scene XVIII)",
+   "x0": 6523,
+   "x1": 7120
+  },
+  {
+   "plate": "XV",
+   "number": 15,
+   "scenes": "XVIII–XX",
+   "title": "A Dacian prisoner is brought in (scene XVIII); building a bridge (scene XIX); building a fort (scene XX)",
+   "x0": 7120,
+   "x1": 7639
+  },
+  {
+   "plate": "XVI",
+   "number": 16,
+   "scenes": "XXI",
+   "title": "Roman advance-posts (scene XXI)",
+   "x0": 7639,
+   "x1": 8134
+  },
+  {
+   "plate": "XVII",
+   "number": 17,
+   "scenes": "XXII–XXIV",
+   "title": "Advance into the forest (scene XXII); making a road through the forest (scene XXIII); the first battle (scene XXIV)",
+   "x0": 8134,
+   "x1": 8689
+  },
+  {
+   "plate": "XVIII",
+   "number": 18,
+   "scenes": "XXIV",
+   "title": "The first battle (scene XXIV)",
+   "x0": 8689,
+   "x1": 9152
+  },
+  {
+   "plate": "XIX",
+   "number": 19,
+   "scenes": "XXIV",
+   "title": "The first battle (scene XXIV)",
+   "x0": 9152,
+   "x1": 9666
+  },
+  {
+   "plate": "XX",
+   "number": 20,
+   "scenes": "XXV–XXVI",
+   "title": "Trajan inspects the enemy’s defence-works (scene XXV); Roman troops cross a river (scene XXVI)",
+   "x0": 9666,
+   "x1": 10249
+  },
+  {
+   "plate": "XXI",
+   "number": 21,
+   "scenes": "XXVII–XXIX",
+   "title": "Trajan addresses his troops (scene XXVII); reception of a Dacian embassy (scene XXVIII); Roman reconnaissance troops (scene XXIX)",
+   "x0": 10249,
+   "x1": 10829
+  },
+  {
+   "plate": "XXII",
+   "number": 22,
+   "scenes": "XXIX–XXX",
+   "title": "Roman reconnaissance troops (scene XXIX); captured Dacian women (scene XXX)",
+   "x0": 10829,
+   "x1": 11187
+  },
+  {
+   "plate": "XXIII",
+   "number": 23,
+   "scenes": "XXXI",
+   "title": "Dacian raiders crossing a river (scene XXXI)",
+   "x0": 11187,
+   "x1": 11607
+  },
+  {
+   "plate": "XXIV",
+   "number": 24,
+   "scenes": "XXXII",
+   "title": "Assault on a Roman fort (scene XXXII)",
+   "x0": 11607,
+   "x1": 11969
+  },
+  {
+   "plate": "XXV",
+   "number": 25,
+   "scenes": "XXXIII",
+   "title": "Embarkation at a riverside harbour (scene XXXIII)",
+   "x0": 11969,
+   "x1": 12413
+  },
+  {
+   "plate": "XXVI",
+   "number": 26,
+   "scenes": "XXXIV–XXXV",
+   "title": "Trajan’s river voyage (scene XXXIV); Trajan disembarks (scene XXXV)",
+   "x0": 12413,
+   "x1": 12968
+  },
+  {
+   "plate": "XXVII",
+   "number": 27,
+   "scenes": "XXXVI–XXXVII",
+   "title": "Forced march of light troops (scene XXXVI); cavalry battle against Sarmatians (scene XXXVII)",
+   "x0": 12968,
+   "x1": 13517
+  },
+  {
+   "plate": "XXVIII",
+   "number": 28,
+   "scenes": "XXXVII",
+   "title": "Cavalry battle against Sarmatians (scene XXXVII)",
+   "x0": 13517,
+   "x1": 13934
+  },
+  {
+   "plate": "XXIX",
+   "number": 29,
+   "scenes": "XXXVIII–XXXIX",
+   "title": "Night-battle against the Dacians (scene XXXVIII); subjugation of a Dacian tribe (scene XXXIX)",
+   "x0": 13934,
+   "x1": 14461
+  },
+  {
+   "plate": "XXX",
+   "number": 30,
+   "scenes": "XXXIX–XL",
+   "title": "Subjugation of a Dacian tribe (scene XXXIX); major battle against the Dacians (scene XL)",
+   "x0": 14461,
+   "x1": 14963
+  },
+  {
+   "plate": "XXXI",
+   "number": 31,
+   "scenes": "XL",
+   "title": "Major battle against the Dacians (scene XL)",
+   "x0": 14963,
+   "x1": 15488
+  },
+  {
+   "plate": "XXXII",
+   "number": 32,
+   "scenes": "XL–XLI",
+   "title": "Major battle against the Dacians (scene XL); flight of the Dacians into the mountains (scene XLI)",
+   "x0": 15488,
+   "x1": 15996
+  },
+  {
+   "plate": "XXXIII",
+   "number": 33,
+   "scenes": "XLII–XLIII",
+   "title": "Trajan addresses his troops (scene XLII); Dacian prisoners (scene XLIII)",
+   "x0": 15996,
+   "x1": 16472
+  },
+  {
+   "plate": "XXXIV",
+   "number": 34,
+   "scenes": "XLIV–XLVI",
+   "title": "The emperor distributes rewards to his men (scene XLIV); torture of Roman prisoners (scene XLV); Trajan embarks (scene XLVI)",
+   "x0": 16472,
+   "x1": 16944
+  },
+  {
+   "plate": "XXXV",
+   "number": 35,
+   "scenes": "XLVI–XLVIII",
+   "title": "Trajan embarks (scene XLVI); troops disembarking (scene XLVII); troops crossing a river (scene XLVIII)",
+   "x0": 16944,
+   "x1": 17480
+  },
+  {
+   "plate": "XXXVI",
+   "number": 36,
+   "scenes": "XLIX–L",
+   "title": "The army on the march (scene XLIX); Trajan welcomes his western army (scene L)",
+   "x0": 17480,
+   "x1": 18032
+  },
+  {
+   "plate": "XXXVII",
+   "number": 37,
+   "scenes": "L–LII",
+   "title": "Trajan welcomes his western army (scene L); Trajan arrives at an army encampment (scene LI); the emperor receives a Dacian embassy (scene LII)",
+   "x0": 18032,
+   "x1": 18559
+  },
+  {
+   "plate": "XXXVIII",
+   "number": 38,
+   "scenes": "LII–LIII",
+   "title": "The emperor receives a Dacian embassy (scene LII); Suovetaurilia (scene LIII)",
+   "x0": 18559,
+   "x1": 19075
+  },
+  {
+   "plate": "XXXIX",
+   "number": 39,
+   "scenes": "LIII–LVI",
+   "title": "Suovetaurilia (scene LIII); adlocutio (scene LIV); advance into the high hills (scene LV); road-building in the mountains (scene LVI)",
+   "x0": 19075,
+   "x1": 19566
+  },
+  {
+   "plate": "XL",
+   "number": 40,
+   "scenes": "LVI–LVII",
+   "title": "Road-building in the mountains (scene LVI); assault on a Dacian village (scene LVII)",
+   "x0": 19566,
+   "x1": 19980
+  },
+  {
+   "plate": "XLI",
+   "number": 41,
+   "scenes": "LVIII–LIX",
+   "title": "Trajan on a bridge (scene LVIII); withdrawal of the Dacians (scene LIX)",
+   "x0": 19980,
+   "x1": 20423
+  },
+  {
+   "plate": "XLII",
+   "number": 42,
+   "scenes": "LX–LXI",
+   "title": "Building a fort (scene LX); reception of a Dacian embassy (scene LXI)",
+   "x0": 20423,
+   "x1": 21003
+  },
+  {
+   "plate": "XLIII",
+   "number": 43,
+   "scenes": "LXII",
+   "title": "Mountain warfare (scene XLII)",
+   "x0": 21003,
+   "x1": 21542
+  },
+  {
+   "plate": "XLIV",
+   "number": 44,
+   "scenes": "LXIII–LXIV",
+   "title": "Advance into the mountains (scene LXIII); light cavalry flying columns (scene LXIV)",
+   "x0": 21542,
+   "x1": 22050
+  },
+  {
+   "plate": "XLV",
+   "number": 45,
+   "scenes": "LXIV",
+   "title": "Light cavalry flying columns (scene LXIV)",
+   "x0": 22050,
+   "x1": 22555
+  },
+  {
+   "plate": "XLVI",
+   "number": 46,
+   "scenes": "LXV–LXVI",
+   "title": "Building fortifications (scene LXV); a major engagement (scene LXVI)",
+   "x0": 22555,
+   "x1": 23054
+  },
+  {
+   "plate": "XLVII",
+   "number": 47,
+   "scenes": "LXVI",
+   "title": "A major engagement (scene LXVI)",
+   "x0": 23054,
+   "x1": 23593
+  },
+  {
+   "plate": "XLVIII",
+   "number": 48,
+   "scenes": "LXVI–LXVII",
+   "title": "A major engagement (scene LXVI); Dacian landscape (scene LXVII)",
+   "x0": 23593,
+   "x1": 24110
+  },
+  {
+   "plate": "XLIX",
+   "number": 49,
+   "scenes": "LXVIII–LXIX",
+   "title": "A prisoner is brought in (scene LXVIII); legionaries wood-clearing (scene LXIX)",
+   "x0": 24110,
+   "x1": 24642
+  },
+  {
+   "plate": "L",
+   "number": 50,
+   "scenes": "LXX–LXXI",
+   "title": "The advance-guard in action (scene LXX); storming of a Dacian fortress (scene LXXI)",
+   "x0": 24642,
+   "x1": 25194
+  },
+  {
+   "plate": "LI",
+   "number": 51,
+   "scenes": "LXXI–LXXII",
+   "title": "Storming of a Dacian fortress (scene LXXI); the last battle of the first war (scene LXXII)",
+   "x0": 25194,
+   "x1": 25678
+  },
+  {
+   "plate": "LII",
+   "number": 52,
+   "scenes": "LXXII–LXXIII",
+   "title": "The last battle of the first war (scene LXXII); the emperor addresses his army (scene LXXIII)",
+   "x0": 25678,
+   "x1": 26241
+  },
+  {
+   "plate": "LIII",
+   "number": 53,
+   "scenes": "LXXIII–LXXV",
+   "title": "The emperor addresses his army (scene LXXIII); Roman soldiers at a spring (scene LXXIV); subjugation of the Dacian People (scene LXXV)",
+   "x0": 26241,
+   "x1": 26765
+  },
+  {
+   "plate": "LIV",
+   "number": 54,
+   "scenes": "LXXV",
+   "title": "Subjugation of the Dacian people (scene LXXV)",
+   "x0": 26765,
+   "x1": 27310
+  },
+  {
+   "plate": "LV",
+   "number": 55,
+   "scenes": "LXXV–LXXVI",
+   "title": "Subjugation of the Dacian people (scene LXXV); departure of native population (scene LXXVI)",
+   "x0": 27310,
+   "x1": 27724
+  },
+  {
+   "plate": "LVI",
+   "number": 56,
+   "scenes": "LXXVI–LXXVII",
+   "title": "Departure of native population (scene LXXVI); Trajan's final address to his troops (scene LXXVII)",
+   "x0": 27724,
+   "x1": 28225
+  },
+  {
+   "plate": "LVII",
+   "number": 57,
+   "scenes": "LXXVIII",
+   "title": "Victory and trophies (scene LXXVIII)",
+   "x0": 28225,
+   "x1": 28717
+  },
+  {
+   "plate": "LVIII",
+   "number": 58,
+   "scenes": "LXXIX",
+   "title": "Trajan’s voyage (scene LXXIX)",
+   "x0": 28717,
+   "x1": 29249
+  },
+  {
+   "plate": "LIX",
+   "number": 59,
+   "scenes": "LXXIX–LXXX",
+   "title": "Trajan’s voyage (scene LXXIX); local inhabitants await Trajan’s arrival (scene LXXX)",
+   "x0": 29249,
+   "x1": 29603
+  },
+  {
+   "plate": "LX",
+   "number": 60,
+   "scenes": "LXXX–LXXXI",
+   "title": "Local inhabitants await Trajan’s arrival (scene LXXX); the emperor is greeted on his journey (scene LXXXI)",
+   "x0": 29603,
+   "x1": 29962
+  },
+  {
+   "plate": "LXI",
+   "number": 61,
+   "scenes": "LXXXII–LXXXIV",
+   "title": "Warships in harbour (scene LXXXII); the local inhabitants escort the emperor (scene LXXXIII); Trajan on the march (scene LXXXIV)",
+   "x0": 29962,
+   "x1": 30502
+  },
+  {
+   "plate": "LXII",
+   "number": 62,
+   "scenes": "LXXXV",
+   "title": "Welcoming sacrifice in Trajan’s honour (scene LXXXV)",
+   "x0": 30502,
+   "x1": 30998
+  },
+  {
+   "plate": "LXIII",
+   "number": 63,
+   "scenes": "LXXXVI",
+   "title": "Trajan sacrifices in a harbour-town (scene LXXXVI)",
+   "x0": 30998,
+   "x1": 31558
+  },
+  {
+   "plate": "LXIV",
+   "number": 64,
+   "scenes": "LXXXVII–LXXXVIII",
+   "title": "The emperor advances by land (scene LXXXVII); advance of Roman troops (scene LXXXVIII)",
+   "x0": 31558,
+   "x1": 32050
+  },
+  {
+   "plate": "LXV",
+   "number": 65,
+   "scenes": "LXXXIX–XC",
+   "title": "Forced march of Trajan on horseback (scene LXXXIX); Trajan is greeted by some barbarians (scene XC)",
+   "x0": 32050,
+   "x1": 32633
+  },
+  {
+   "plate": "LXVI",
+   "number": 66,
+   "scenes": "XC–XCII",
+   "title": "Trajan is greeted by some barbarians (scene XC); sacrifice at six altars (scene XCI); road-building in the mountains (scene XCII)",
+   "x0": 32633,
+   "x1": 33269
+  },
+  {
+   "plate": "LXVII",
+   "number": 67,
+   "scenes": "XCII",
+   "title": "Road-building in the mountains (scene XCII)",
+   "x0": 33269,
+   "x1": 33728
+  },
+  {
+   "plate": "LXVIII",
+   "number": 68,
+   "scenes": "XCIII",
+   "title": "The Dacians prepare for war (scene XCIII)",
+   "x0": 33728,
+   "x1": 34270
+  },
+  {
+   "plate": "LXIX",
+   "number": 69,
+   "scenes": "XCIV",
+   "title": "Assault on a Roman fort (scene XCIV)",
+   "x0": 34270,
+   "x1": 34686
+  },
+  {
+   "plate": "LXX",
+   "number": 70,
+   "scenes": "XCV–XCVI",
+   "title": "The Dacians assault Roman posts (scene XCV); the Romans fight back (scene XCVI)",
+   "x0": 34686,
+   "x1": 35111
+  },
+  {
+   "plate": "LXXI",
+   "number": 71,
+   "scenes": "XCVII–XCVIII",
+   "title": "Trajan gallops up to the rescue (scene XCVII); arrival of Roman troops (scene XCVIII)",
+   "x0": 35111,
+   "x1": 35493
+  },
+  {
+   "plate": "LXXII",
+   "number": 72,
+   "scenes": "XCVIII–C",
+   "title": "Arrival of Roman troops (scene XCVIII); the emperor sacrifices by the Danube (scene XCIX); Trajan receives foreign embassies (scene C)",
+   "x0": 35493,
+   "x1": 35961
+  },
+  {
+   "plate": "LXXIII",
+   "number": 73,
+   "scenes": "C",
+   "title": "Trajan receives foreign embassies (scene C)",
+   "x0": 35961,
+   "x1": 36369
+  },
+  {
+   "plate": "LXXIV",
+   "number": 74,
+   "scenes": "CI–CII",
+   "title": "Advance of Roman troops (scene CI); Trajan greeted by his troops (scene CII)",
+   "x0": 36369,
+   "x1": 36804
+  },
+  {
+   "plate": "LXXV",
+   "number": 75,
+   "scenes": "CII",
+   "title": "Trajan greeted by his troops (scene CII)",
+   "x0": 36804,
+   "x1": 37237
+  },
+  {
+   "plate": "LXXVI",
+   "number": 76,
+   "scenes": "CII–CIII",
+   "title": "Trajan greeted by his troops (scene CII); purification of the army (scene CIII)",
+   "x0": 37237,
+   "x1": 37677
+  },
+  {
+   "plate": "LXXVII",
+   "number": 77,
+   "scenes": "CIV",
+   "title": "Trajan addresses his troops (scene CIV)",
+   "x0": 37677,
+   "x1": 38178
+  },
+  {
+   "plate": "LXXVIII",
+   "number": 78,
+   "scenes": "CIV–CVI",
+   "title": "Trajan addresses his troops (scene CIV); council of war (scene CV); advance of the army (scene CVI)",
+   "x0": 38178,
+   "x1": 38730
+  },
+  {
+   "plate": "LXXIX",
+   "number": 79,
+   "scenes": "CVI–CVII",
+   "title": "Advance of the army (scene CVI); encampment scene (scene CVII)",
+   "x0": 38730,
+   "x1": 39216
+  },
+  {
+   "plate": "LXXX",
+   "number": 80,
+   "scenes": "CVIII",
+   "title": "Continued march of the armies (scene CVIII)",
+   "x0": 39216,
+   "x1": 39720
+  },
+  {
+   "plate": "LXXXI",
+   "number": 81,
+   "scenes": "CIX–CX",
+   "title": "Troops entering camp (scene CIX); Roman legionaries foraging (scene CX)",
+   "x0": 39720,
+   "x1": 40274
+  },
+  {
+   "plate": "LXXXII",
+   "number": 82,
+   "scenes": "CXI–CXII",
+   "title": "Dacian defence-works (scene CXI); advance guard skirmish (scene CXII)",
+   "x0": 40274,
+   "x1": 40758
+  },
+  {
+   "plate": "LXXXIII",
+   "number": 83,
+   "scenes": "CXII–CXIII",
+   "title": "Advance guard skirmish (scene CXII); assault on a fortress (scene CXIII)",
+   "x0": 40758,
+   "x1": 41294
+  },
+  {
+   "plate": "LXXXIV",
+   "number": 84,
+   "scenes": "CXIII",
+   "title": "Assault on a fortress (scene CXIII)",
+   "x0": 41294,
+   "x1": 41743
+  },
+  {
+   "plate": "LXXXV",
+   "number": 85,
+   "scenes": "CXIV",
+   "title": "Trajan views the besieged fortress (scene CXIV)",
+   "x0": 41743,
+   "x1": 42171
+  },
+  {
+   "plate": "LXXXVI",
+   "number": 86,
+   "scenes": "CXV",
+   "title": "A sally by the besieged (scene CXV)",
+   "x0": 42171,
+   "x1": 42771
+  },
+  {
+   "plate": "LXXXVII",
+   "number": 87,
+   "scenes": "CXVI–CXVII",
+   "title": "An assault on the fortress (scene CXVI); preparations for a blockade (scene CXVII)",
+   "x0": 42771,
+   "x1": 43158
+  },
+  {
+   "plate": "LXXXVIII",
+   "number": 88,
+   "scenes": "CXVII",
+   "title": "Preparations for a blockade (scene CXVII)",
+   "x0": 43158,
+   "x1": 43533
+  },
+  {
+   "plate": "LXXXIX",
+   "number": 89,
+   "scenes": "CXVIII",
+   "title": "Dacian pileatus kneels before Trajan (scene CXVIII)",
+   "x0": 43533,
+   "x1": 44004
+  },
+  {
+   "plate": "XC",
+   "number": 90,
+   "scenes": "CXIX–CXX",
+   "title": "Dacians set fire to their fortress (scene CXIX); suicide of Dacian noblemen (scene CXX)",
+   "x0": 44004,
+   "x1": 44428
+  },
+  {
+   "plate": "XCI",
+   "number": 91,
+   "scenes": "CXX–CXXI",
+   "title": "Suicide of Dacian noblemen (scene CXX); the Dacians bury their dead (scene CXXI)",
+   "x0": 44428,
+   "x1": 44962
+  },
+  {
+   "plate": "XCII",
+   "number": 92,
+   "scenes": "CXXII–CXXIII",
+   "title": "Flight of the Dacians (scene CXXII); subjugation of Dacian hordes (scene CXXIII)",
+   "x0": 44962,
+   "x1": 45612
+  },
+  {
+   "plate": "XCIII",
+   "number": 93,
+   "scenes": "CXXIII",
+   "title": "Subjugation of Dacian hordes (scene CXXIII)",
+   "x0": 45612,
+   "x1": 46213
+  },
+  {
+   "plate": "XCIV",
+   "number": 94,
+   "scenes": "CXXIV–CXXVI",
+   "title": "Looting by Roman troops (scene CXXIV); Trajan saluted by his troops (scene CXXV); the Roman troops march out (scene CXXVI)",
+   "x0": 46213,
+   "x1": 46764
+  },
+  {
+   "plate": "XCV",
+   "number": 95,
+   "scenes": "CXXVI–CXXVII",
+   "title": "The Roman troops march out (scene CXXVI); construction of fortifications (scene CXXVII)",
+   "x0": 46764,
+   "x1": 47338
+  },
+  {
+   "plate": "XCVI",
+   "number": 96,
+   "scenes": "CXXVIII–CXXX",
+   "title": "Construction of fortifications (scenes CXXVIII, CXXIX); Dacians kneel before the emperor (scene CXXX)",
+   "x0": 47338,
+   "x1": 47915
+  },
+  {
+   "plate": "XCVII",
+   "number": 97,
+   "scenes": "CXXXI–CXXXII",
+   "title": "Romans crossing a river (scene CXXXI); Dacians march out from a fort (scene CXXXII)",
+   "x0": 47915,
+   "x1": 48472
+  },
+  {
+   "plate": "XCVIII",
+   "number": 98,
+   "scenes": "CXXXII–CXXXIV",
+   "title": "Dacians march out from a fort (scene CXXXII); legionaries building boats and Dacians marching ahead (scene CXXXIII); Dacian attack on a Roman fort (scene CXXXIV)",
+   "x0": 48472,
+   "x1": 48941
+  },
+  {
+   "plate": "XCIX",
+   "number": 99,
+   "scenes": "CXXXIV–CXXXV",
+   "title": "Dacian attack on a Roman fort (scene CXXXIV); Dacian pileati in the mountains (scene CXXXV)",
+   "x0": 48941,
+   "x1": 49399
+  },
+  {
+   "plate": "C",
+   "number": 100,
+   "scenes": "CXXXVI–CXXXVII",
+   "title": "Withdrawal of the Dacians (scene CXXXVI); Trajan addresses his troops (scene CXXXVII)",
+   "x0": 49399,
+   "x1": 49965
+  },
+  {
+   "plate": "CI",
+   "number": 101,
+   "scenes": "CXXXVII–CXXXVIII",
+   "title": "Trajan addresses his troops (scene CXXXVII); bringing in of valuable loot (scene CXXXVIII)",
+   "x0": 49965,
+   "x1": 50302
+  },
+  {
+   "plate": "CII",
+   "number": 102,
+   "scenes": "CXXXIX–CXL",
+   "title": "Message for the Dacians (scene CXXXIX); retreat and suicide of Dacians (scene CXL)",
+   "x0": 50302,
+   "x1": 50748
+  },
+  {
+   "plate": "CIII",
+   "number": 103,
+   "scenes": "CXL–CXLI",
+   "title": "Retreat and suicide of Dacians (scene CXL); Dacian chieftains before Trajan (scene CXLI)",
+   "x0": 50748,
+   "x1": 51153
+  },
+  {
+   "plate": "CIV",
+   "number": 104,
+   "scenes": "CXLII–CXLIII",
+   "title": "Roman cavalry in the mountains (scene CXLII); fight between pursuers and pursued (scene CXLIII)",
+   "x0": 51153,
+   "x1": 51564
+  },
+  {
+   "plate": "CV",
+   "number": 105,
+   "scenes": "CXLIII–CXLIV",
+   "title": "Fight between pursuers and pursued (scene CXLIII); Dacians fleeing on horseback in the mountains (scene CXLIV)",
+   "x0": 51564,
+   "x1": 51982
+  },
+  {
+   "plate": "CVI",
+   "number": 106,
+   "scenes": "CXLV",
+   "title": "The death of Decebalus (scene CXLV)",
+   "x0": 51982,
+   "x1": 52404
+  },
+  {
+   "plate": "CVII",
+   "number": 107,
+   "scenes": "CXLVI",
+   "title": "Dacian men and boys made prisoner (scene CXLVI)",
+   "x0": 52404,
+   "x1": 52746
+  },
+  {
+   "plate": "CVIII",
+   "number": 108,
+   "scenes": "CXLVII–CXLVIII",
+   "title": "The head of Decebalus displayed to the Roman troops (scene CXLVII); capture of Dacian pileati (scene CXLVIII)",
+   "x0": 52746,
+   "x1": 53176
+  },
+  {
+   "plate": "CIX",
+   "number": 109,
+   "scenes": "CXLVIII–CL",
+   "title": "Capture of Dacian pileati (scene CXLVIII); alpine landscape (scene CXLIX); Dacian prisoners rounded up (scene CL)",
+   "x0": 53176,
+   "x1": 53603
+  },
+  {
+   "plate": "CX",
+   "number": 110,
+   "scenes": "CL–CLI",
+   "title": "Dacian prisoners rounded up (scene CL); last fighting of the war (scene CLI)",
+   "x0": 53603,
+   "x1": 53939
+  },
+  {
+   "plate": "CXI",
+   "number": 111,
+   "scenes": "CLI–CLIV",
+   "title": "Last fighting of the war (scene CLI); removal of prisoners (scene CLII); destruction of enemy strongholds (scene CLIII); Roman troops on the march (scene CLIV)",
+   "x0": 53939,
+   "x1": 54316
+  },
+  {
+   "plate": "CXII",
+   "number": 112,
+   "scenes": "CLIV–CLV",
+   "title": "Roman troops on the march (scene CLIV); departure of remnants of the Dacians (scene CLV)",
+   "x0": 54316,
+   "x1": 54890
+  },
+  {
+   "plate": "CXIII",
+   "number": 113,
+   "scenes": "CLV",
+   "title": "Departure of remnants of the Dacians (scene CLV)",
+   "x0": 54890,
+   "x1": 55943
+  }
+ ]
+}
