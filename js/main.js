@@ -1,20 +1,32 @@
 /**
  * Boot: fill the page from content.js and start each section.
- * Each part loads on its own, so a missing data file only blanks its section.
+ * Each part starts on its own, so a missing file only blanks its own section.
  */
 
 import * as content from './content.js';
 import { el, clear, getJson } from './dom.js';
 import { toRoman } from './roman.js';
-import { mountDrill, mountNumerals, mountNameBuilder, mountReadings, mountGlosses } from './latin.js';
+import { mountDrill, mountNameBuilder, mountReadings, mountGlosses, mountDio } from './latin.js';
 
-// ── words from content.js into [data-content] ──
+const read = (key) => key.split('.').reduce((o, k) => o?.[k], content);
+
+// ── words from content.js ──
 for (const node of document.querySelectorAll('[data-content]')) {
-  const value = node.dataset.content.split('.').reduce((o, k) => o?.[k], content);
+  const value = read(node.dataset.content);
   if (typeof value === 'string') node.textContent = value;
 }
+// A list of paragraphs.
+for (const node of document.querySelectorAll('[data-list]')) {
+  const value = read(node.dataset.list);
+  if (Array.isArray(value)) node.replaceChildren(...value.map((text) => el('p', {}, text)));
+}
+// [label, value] pairs as a definition list, one row each.
+for (const node of document.querySelectorAll('[data-facts]')) {
+  const value = read(node.dataset.facts);
+  if (Array.isArray(value)) node.replaceChildren(...value.map(([dt, dd]) => el('div', {}, el('dt', {}, dt), el('dd', {}, dd))));
+}
 
-// ── the key scene cards ──
+// ── the climb ──
 const scenesBox = document.querySelector('.scenes');
 const sceneCards = content.keyScenes.map((s) => el('article', { class: 'scene', 'aria-hidden': 'true' },
   el('div', { class: 'scene__img' }, el('img', { src: s.image, alt: s.title, loading: 'lazy' })),
@@ -25,7 +37,6 @@ const sceneCards = content.keyScenes.map((s) => el('article', { class: 'scene', 
     el('p', { class: 'scene__body' }, s.text))));
 scenesBox.append(...sceneCards);
 
-// ── the climb ──
 const stage = document.querySelector('.ascent__stage');
 const gauge = {
   fill: stage.querySelector('.gauge__fill'),
@@ -67,47 +78,37 @@ import('./column.js')
     stage.querySelector('.ascent__loading').textContent = 'The column needs WebGL, which this browser has turned off.';
   });
 
-// ── the evidence table ──
+// ── the inscription station ──
 (async () => {
-  const [boxes, coinData] = await Promise.all([
-    getJson('assets/misc/inscription.json', []),
-    getJson('assets/coins/coins.json', []),
-  ]);
-  const coins = mergeCoins(coinData, content.coins);
-  const { mountLens } = await import('./lens.js');
-  mountLens({
-    table: document.querySelector('.evidence__table'),
+  const boxes = await getJson('assets/misc/inscription.json', []);
+  const { mountStation } = await import('./station.js');
+  mountStation(document.querySelector('.station'), {
     inscription: content.inscription,
-    boxes: Array.isArray(boxes) ? boxes : boxes.lines,
-    coins,
+    boxes: Array.isArray(boxes) ? boxes : boxes.lines || [],
   });
 })();
 
-/**
- * The coins in content.js, with their pictures found through
- * assets/coins/coins.json (matched by id).
- */
-function mergeCoins(fromFiles, fromContent) {
-  const files = new Map((Array.isArray(fromFiles) ? fromFiles : []).map((c) => [c.id, c]));
-  return (fromContent || []).map((coin) => {
-    const src = files.get(coin.id) || {};
+// ── the coins ──
+(async () => {
+  const files = await getJson('assets/coins/coins.json', []);
+  const byId = new Map((Array.isArray(files) ? files : []).map((c) => [c.id, c]));
+  const coins = content.coins.map((coin) => {
+    const src = byId.get(coin.id) || {};
     const face = (side) => ({
       image: typeof src[side] === 'string' ? `assets/${src[side]}` : `assets/coins/${coin.id}-${side === 'obverse' ? 'obv' : 'rev'}.jpg`,
-      legend: src[`${side}Legend`] || '',
       ...(coin[side] || {}),
     });
-    return {
-      ...coin,
-      date: coin.date || src.date,
-      ref: coin.ref || src.ric,
-      obverse: face('obverse'),
-      reverse: face('reverse'),
-    };
+    return { ...coin, obverse: face('obverse'), reverse: face('reverse') };
   });
-}
+  const { mountGallery } = await import('./gallery.js');
+  mountGallery(document.querySelector('.coins'), { coins });
+})();
 
 // ── the emperor ──
 mountNameBuilder(document.querySelector('.namebuilder'), content);
+
+// ── the bridge ──
+import('./bridge.js').then(({ mountBridge }) => mountBridge(document.querySelector('.bridge'), content.bridge));
 
 // ── the map, once it is near ──
 const empire = document.querySelector('.map');
@@ -115,53 +116,62 @@ new IntersectionObserver(([entry], observer) => {
   if (!entry.isIntersecting) return;
   observer.disconnect();
   import('./map.js').then(({ mountMap }) => mountMap(empire)).catch((error) => console.error(error));
-}, { rootMargin: '600px' }).observe(empire);
+}, { rootMargin: '800px' }).observe(empire);
 
-// ── Latin ──
-mountDrill(document.querySelector('.drill'), content.abbreviations);
-mountNumerals(document.querySelector('.numerals'));
+// ── sources ──
 mountReadings(document.querySelector('.reading'), content.readings);
+mountDio(document.querySelector('.dio'), content.dio);
+mountDrill(document.querySelector('.drill'), content.abbreviations);
 mountGlosses(document.querySelector('.gloss'));
 
-// ── English / Latin headings ──
-const langSwitch = document.querySelector('.langswitch');
-const swappable = [...document.querySelectorAll('[data-la]')];
-for (const node of swappable) node.dataset.en = node.textContent;
-langSwitch.addEventListener('click', () => {
-  const latin = langSwitch.getAttribute('aria-pressed') !== 'true';
-  langSwitch.setAttribute('aria-pressed', String(latin));
-  for (const node of swappable) {
-    node.textContent = latin ? node.dataset.la : node.dataset.en;
-    node.lang = latin ? 'la' : '';
+// ── the menu ──
+const scrim = document.querySelector('.menuscrim');
+const toggles = [...document.querySelectorAll('.mainnav__item[aria-controls], .menubutton')];
+function closeMenus(except = null) {
+  for (const t of toggles) {
+    if (t === except) continue;
+    t.setAttribute('aria-expanded', 'false');
+    document.getElementById(t.getAttribute('aria-controls')).hidden = true;
   }
-  try { localStorage.setItem('lang', latin ? 'la' : 'en'); } catch { /* private mode */ }
-});
-try { if (localStorage.getItem('lang') === 'la') langSwitch.click(); } catch { /* private mode */ }
-
-// ── which section the bar is on ──
-const navLinks = [...document.querySelectorAll('.topnav a')];
-const sections = navLinks.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-const navObserver = new IntersectionObserver((entries) => {
-  for (const entry of entries) {
-    if (!entry.isIntersecting) continue;
-    for (const a of navLinks) a.toggleAttribute('aria-current', a.getAttribute('href') === `#${entry.target.id}`);
-  }
-}, { rootMargin: '-45% 0px -50% 0px' });
-sections.forEach((s) => navObserver.observe(s));
+  scrim.hidden = !except;
+}
+for (const t of toggles) {
+  t.addEventListener('click', () => {
+    const open = t.getAttribute('aria-expanded') !== 'true';
+    closeMenus(open ? t : null);
+    t.setAttribute('aria-expanded', String(open));
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !open;
+  });
+}
+scrim.addEventListener('click', () => closeMenus());
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenus(); });
+for (const link of document.querySelectorAll('.megamenu a')) {
+  link.addEventListener('click', () => {
+    closeMenus();
+    if (link.dataset.openView) {
+      // The map loads when it comes near; press its button once it has.
+      const press = () => {
+        if (document.querySelector('.map__svg .world')) document.querySelector(`[data-view="${link.dataset.openView}"]`).click();
+        else setTimeout(press, 200);
+      };
+      press();
+    }
+  });
+}
 
 // ── credits ──
 (async () => {
   const credits = await getJson('assets/credits.json', []);
   const box = document.querySelector('.credits');
-  const sources = await fetch('data/SOURCES.md').then((r) => (r.ok ? r.text() : '')).catch(() => '');
   clear(box);
   for (const c of Array.isArray(credits) ? credits : credits.files || []) {
     box.appendChild(el('p', {},
-      el('a', { href: c.sourceUrl, rel: 'noopener' }, c.title || c.file),
-      ` — ${c.author || 'unknown'}, `,
+      c.sourceUrl ? el('a', { href: c.sourceUrl, rel: 'noopener' }, c.title || c.file) : c.title || c.file,
+      ` — ${c.author || 'unknown'}${c.license ? ', ' : ''}`,
       c.licenseUrl ? el('a', { href: c.licenseUrl, rel: 'noopener license' }, c.license) : c.license || ''));
   }
-  if (sources) {
-    box.appendChild(el('p', {}, 'Map data: ', el('a', { href: 'data/SOURCES.md' }, 'sources and licences')));
-  }
+  box.appendChild(el('p', {}, 'Map data: Natural Earth (public domain); Tiber © OpenStreetMap contributors (ODbL); frontiers drawn for this site. ',
+    el('a', { href: 'data/SOURCES.md' }, 'Full list')));
+  box.appendChild(el('p', {}, 'Texts: Cassius Dio tr. E. Cary (Loeb, 1925), via LacusCurtius; Latin texts from The Latin Library; translations of the Latin by the author. Background: R. B. Ulrich, ',
+    el('a', { href: 'https://www.trajans-column.org/', rel: 'noopener' }, 'trajans-column.org'), '; C. Cichorius, Die Reliefs der Traianssäule (1896–1900).'));
 })();

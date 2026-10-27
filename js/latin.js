@@ -4,7 +4,7 @@
  */
 
 import { el, clear } from './dom.js';
-import { toRoman, fromRoman, explainRoman } from './roman.js';
+import { toRoman } from './roman.js';
 
 // ---------------------------------------------------------------------------
 // abbreviations
@@ -57,32 +57,6 @@ function shuffle(list) {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
-}
-
-// ---------------------------------------------------------------------------
-// numerals
-// ---------------------------------------------------------------------------
-
-export function mountNumerals(card) {
-  const input = card.querySelector('input');
-  const out = card.querySelector('.numerals__out');
-  const how = card.querySelector('.numerals__how');
-  function update() {
-    const raw = input.value.trim();
-    if (!raw) { out.textContent = ''; how.textContent = ''; return; }
-    if (/^\d+$/.test(raw)) {
-      const n = Number(raw);
-      const r = toRoman(n);
-      out.textContent = r || '—';
-      how.textContent = r ? explainRoman(n) : 'Romans wrote numbers from 1 to 3,999 this way.';
-    } else {
-      const n = fromRoman(raw);
-      out.textContent = Number.isNaN(n) ? '—' : String(n);
-      how.textContent = Number.isNaN(n) ? 'That is not a well-formed numeral.' : explainRoman(n);
-    }
-  }
-  input.addEventListener('input', update);
-  update();
 }
 
 // ---------------------------------------------------------------------------
@@ -199,4 +173,14 @@ export function mountGlosses(tip) {
     showFor(target, r.left, r.top);
   });
   document.addEventListener('focusout', () => { tip.hidden = true; });
+}
+
+/** Cassius Dio, in English: he wrote in Greek. */
+export function mountDio(box, passages) {
+  for (const passage of passages) {
+    box.appendChild(el('figure', {},
+      el('h4', {}, passage.title),
+      el('blockquote', {}, passage.text),
+      el('figcaption', {}, `Cassius Dio, ${passage.ref}`)));
+  }
 }

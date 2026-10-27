@@ -61,20 +61,20 @@
  },
  {
   "file": "misc/bust.jpg",
-  "title": "Portrait head of Trajan on a modern bust (SK Dresden Hm 365) 01.jpg",
-  "author": "Mark Landon",
-  "license": "CC BY 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_head_of_Trajan_on_a_modern_bust_(SK_Dresden_Hm_365)_01.jpg",
+  "title": "Statue of Trajan",
+  "author": "Supplied by the site author (source to be credited)",
+  "license": "",
+  "licenseUrl": "",
+  "sourceUrl": "",
   "note": "Photograph licence; the photographed artwork itself is public domain."
  },
  {
   "file": "misc/column-photo.jpg",
-  "title": "Trajan's Column HD.jpg",
-  "author": "Livioandronico2013",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trajan%27s_Column_HD.jpg"
+  "title": "Trajan's Column at sunset",
+  "author": "Supplied by the site author (source to be credited)",
+  "license": "",
+  "licenseUrl": "",
+  "sourceUrl": ""
  },
  {
   "file": "misc/inscription.jpg",
@@ -299,5 +299,204 @@
    "https://commons.wikimedia.org/wiki/File:112_Conrad_Cichorius,_Die_Reliefs_der_Traianss%C3%A4ule,_Tafel_CXII.jpg",
    "https://commons.wikimedia.org/wiki/File:113_Conrad_Cichorius,_Die_Reliefs_der_Traianss%C3%A4ule,_Tafel_CXIII.jpg"
   ]
+ },
+ {
+  "file": "misc/bridge-relief.jpg",
+  "title": "Trajan's Column - NMR - panel 085 C.jpg",
+  "author": "Joe Mabel",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trajan%27s_Column_-_NMR_-_panel_085_C.jpg",
+  "note": "Photograph licence; the photographed artwork itself is public domain."
+ },
+ {
+  "file": "misc/bridge-ruins.jpg",
+  "title": "Remains of the Trajan's Bridge on the right bank of Danube, Serbia (40315224890).jpg",
+  "author": "Carole Raddato from FRANKFURT, Germany",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Remains_of_the_Trajan%27s_Bridge_on_the_right_bank_of_Danube,_Serbia_(40315224890).jpg"
+ },
+ {
+  "file": "misc/bridge-reconstruction.jpg",
+  "title": "Trajan's Bridge Across the Danube, Modern Reconstruction.jpg",
+  "author": "Rapsak",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trajan%27s_Bridge_Across_the_Danube,_Modern_Reconstruction.jpg",
+  "note": "Photograph of a reproduction of E. Duperrex's 1907 reconstruction drawing, displayed at Drobeta-Turnu Severin."
+ },
+ {
+  "file": "places/forum-of-trajan.jpg",
+  "title": "Foro Traiano dal Vittoriano Roma sera.jpg",
+  "author": "Wolfgang Moroder",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Foro_Traiano_dal_Vittoriano_Roma_sera.jpg"
+ },
+ {
+  "file": "places/basilica-ulpia.jpg",
+  "title": "RomanForum.jpg",
+  "author": "Meshari Alawfi",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:RomanForum.jpg"
+ },
+ {
+  "file": "places/trajans-column.jpg",
+  "title": "Santissimo Nome di Maria and Trajan's Column 06.jpg",
+  "author": "John Samuel",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Santissimo_Nome_di_Maria_and_Trajan%27s_Column_06.jpg"
+ },
+ {
+  "file": "places/markets-of-trajan.jpg",
+  "title": "Forum of Trajan 1, Rome.jpg",
+  "author": "Nhartmannphotos",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Forum_of_Trajan_1,_Rome.jpg"
+ },
+ {
+  "file": "places/baths-of-trajan.jpg",
+  "title": "Trajansthermen.jpg",
+  "author": "Rabax63",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trajansthermen.jpg"
+ },
+ {
+  "file": "places/aqua-traiana.jpg",
+  "title": "Fontana dellAcqua Paola (8086678675).jpg",
+  "author": "Randi Hausken from Bærum, Norway",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fontana_dellAcqua_Paola_(8086678675).jpg",
+  "note": "Fontana dell'Acqua Paola (1612), the papal terminus of the restored Aqua Traiana on the Janiculum."
+ },
+ {
+  "file": "places/portus.jpg",
+  "title": "Speculum Romanae Magnificentiae- Port of Rome MET DP870571.jpg",
+  "author": "Ambrogio Brambilla / Claude Duchet / Étienne Dupérac",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Speculum_Romanae_Magnificentiae-_Port_of_Rome_MET_DP870571.jpg",
+  "note": "16th-century engraving (Speculum Romanae Magnificentiae) imagining the harbour with Trajan's hexagonal basin."
+ },
+ {
+  "file": "places/via-traiana.jpg",
+  "title": "Scavi di egnazia, via traiana 01.jpg",
+  "author": "Sailko",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scavi_di_egnazia,_via_traiana_01.jpg"
+ },
+ {
+  "file": "places/arch-benevento.jpg",
+  "title": "The Arch of Trajan, Benevento, Italy - 49866022603.jpg",
+  "author": "Following Hadrian",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Arch_of_Trajan,_Benevento,_Italy_-_49866022603.jpg"
+ },
+ {
+  "file": "places/arch-ancona.jpg",
+  "title": "Arco di Traiano - Porto di Ancona.jpg",
+  "author": "Claudio.stanco",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arco_di_Traiano_-_Porto_di_Ancona.jpg"
+ },
+ {
+  "file": "places/harbour-ancona.jpg",
+  "title": "Jakob Philipp Hackert (1784) Veduta del porto di Ancona.jpg",
+  "author": "Jacob Philipp Hackert",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jakob_Philipp_Hackert_(1784)_Veduta_del_porto_di_Ancona.jpg",
+  "note": "Painting (1784) of the harbour of Ancona with Trajan's arch on the mole."
+ },
+ {
+  "file": "places/trajans-bridge.jpg",
+  "title": "Remains of the Trajan's Bridge on the right bank of Danube, Serbia (27251575447).jpg",
+  "author": "Carole Raddato from FRANKFURT, Germany",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Remains_of_the_Trajan%27s_Bridge_on_the_right_bank_of_Danube,_Serbia_(27251575447).jpg"
+ },
+ {
+  "file": "places/tabula-traiana.jpg",
+  "title": "Traian's Table (Tabula Traiana)2.jpg",
+  "author": "Sadko, Wikipedia",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traian%27s_Table_(Tabula_Traiana)2.jpg"
+ },
+ {
+  "file": "places/alcantara-bridge.jpg",
+  "title": "Puente de Alcántara.jpg",
+  "author": "Amfeli",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puente_de_Alc%C3%A1ntara.jpg"
+ },
+ {
+  "file": "places/tropaeum-traiani.jpg",
+  "title": "006 MG 6430 Tropaeum Traiani Adamclisi 006.jpg",
+  "author": "Bogdan Croitoru",
+  "license": "CC BY-SA 3.0 ro",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:006_MG_6430_Tropaeum_Traiani_Adamclisi_006.jpg"
+ },
+ {
+  "file": "places/sarmizegetusa-ulpia.jpg",
+  "title": "Aerial photographs of Ulpia Traiana Sarmizegetusa-0170.jpg",
+  "author": "Raimond Spekking",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aerial_photographs_of_Ulpia_Traiana_Sarmizegetusa-0170.jpg"
+ },
+ {
+  "file": "places/timgad.jpg",
+  "title": "Timgad (15847441606).jpg",
+  "author": "Dan Sloan",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Timgad_(15847441606).jpg"
+ },
+ {
+  "file": "places/via-nova-traiana.jpg",
+  "title": "Petra Roman Gate.jpg",
+  "author": "David Bjorgen",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Petra_Roman_Gate.jpg",
+  "note": "Petra, the Via Nova Traiana's principal city on the route from Bostra to Aila."
+ },
+ {
+  "file": "places/centumcellae.jpg",
+  "title": "Forte Michelangelo 2014.jpg",
+  "author": "Shapiro1983 (Italian Wikipedia)",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Forte_Michelangelo_2014.jpg",
+  "note": "Forte Michelangelo (16th c.) guards the mouth of Trajan's harbour at Civitavecchia."
+ },
+ {
+  "file": "places/trajans-kiosk.jpg",
+  "title": "Philae Temple R01.jpg",
+  "author": "Marc Ryckaert",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Philae_Temple_R01.jpg"
+ },
+ {
+  "file": "places/italica.jpg",
+  "title": "Anfiteatro de las ruinas romanas de Itálica, Santiponce, Sevilla, España, 2015-12-06, DD 34-45 PAN HDR.JPG",
+  "author": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anfiteatro_de_las_ruinas_romanas_de_It%C3%A1lica,_Santiponce,_Sevilla,_Espa%C3%B1a,_2015-12-06,_DD_34-45_PAN_HDR.JPG"
  }
 ]
